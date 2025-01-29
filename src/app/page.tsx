@@ -18,6 +18,7 @@ export const relatedProductData: Product[] = relatedProductDataJson;
 export const reviewsData: Review[] = reviewsDataJson;
 
 export default async function Home() {
+  const allProductsLinks = await readExcelAndTransform("products.xlsx");
   return (
     <>
       <Header />
