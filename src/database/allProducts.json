@@ -180,19 +180,6 @@
     "rating": 0
   },
   {
-    "id": 11,
-    "title": "Jugaadh",
-    "gallery": [],
-    "price": 699,
-    "discount": {
-      "amount": 0,
-      "percentage": 0
-    },
-    "category": "T-shirt",
-    "orientation": "Men",
-    "rating": 0
-  },
-  {
     "id": 12,
     "title": "Modern David",
     "srcUrl": "Artboard 1 Mockup - 2025-01-24T203311.012.jpg",
