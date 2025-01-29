@@ -1,0 +1,895 @@
+[
+  {
+    "id": 1,
+    "title": "Astrocat",
+    "srcUrl": "23.png",
+    "gallery": [
+      "21.png",
+      "nmn.png",
+      ".cnm n.png"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 2,
+    "title": "Bhai",
+    "srcUrl": "Artboard 1 Mockup (85).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (82).jpg",
+      "Artboard 1 Mockup (83).jpg",
+      "Artboard 1 Mockup (84).jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 3,
+    "title": "Dance",
+    "srcUrl": "Artboard 1 Mockup (72).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (75).jpg",
+      "Artboard 1 Mockup (76).jpg",
+      "Artboard 1 Mockup (77).jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 4,
+    "title": "DJ T Rex",
+    "srcUrl": "Artboard 1 Mockup (89).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (91).jpg",
+      "Artboard 1 Mockup (92).jpg",
+      "Artboard 1 Mockup (93).jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 5,
+    "title": "Fattu",
+    "srcUrl": "Artboard 1 Mockup (88).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (86).jpg",
+      "Artboard 1 Mockup (87).jpg",
+      "Artboard 1 Mockup (90).jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 6,
+    "title": "Flexibility",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T160559.158.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T160639.046.jpg",
+      "Artboard 1 Mockup - 2025-01-24T160958.134.jpg",
+      "Artboard 1 Mockup - 2025-01-24T161840.557.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 7,
+    "title": "Flipping",
+    "srcUrl": "Artboard 1 Mockup (100).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (97).jpg",
+      "Artboard 1 Mockup (99).jpg",
+      "Artboard 1 Mockup - 2025-01-23T231033.676.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 8,
+    "title": "Hanging",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-23T233426.406.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-23T233933.074.jpg",
+      "Artboard 1 Mockup - 2025-01-23T234018.514.jpg",
+      "Artboard 1 Mockup - 2025-01-23T234048.089.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 9,
+    "title": "Knowledge",
+    "srcUrl": "Artboard 1 Mockup (95).jpg",
+    "gallery": [
+      "Artboard 1 Mockup (94).jpg",
+      "Artboard 1 Mockup (96).jpg",
+      "Artboard 1 Mockup (98).jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 10,
+    "title": "Lazy Sloth",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T180444.541.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T180523.769.jpg",
+      "Artboard 1 Mockup - 2025-01-24T180536.961.jpg",
+      "Artboard 1 Mockup - 2025-01-24T180731.086.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 11,
+    "title": "Jugaadh",
+    "gallery": [],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 12,
+    "title": "Modern David",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T203311.012.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T204309.309.jpg",
+      "Artboard 1 Mockup - 2025-01-24T204329.857.jpg",
+      "Artboard 1 Mockup - 2025-01-24T204356.742.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 13,
+    "title": "Morning X",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T174300.569.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T174355.709.jpg",
+      "Artboard 1 Mockup - 2025-01-24T174412.935.jpg",
+      "Artboard 1 Mockup - 2025-01-24T174556.548.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 14,
+    "title": "New Tricks",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T181132.507.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T181146.480.jpg",
+      "Artboard 1 Mockup - 2025-01-24T181420.117.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 15,
+    "title": "No Tension",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T163541.398.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T163610.179.jpg",
+      "Artboard 1 Mockup - 2025-01-24T163824.116.jpg",
+      "Artboard 1 Mockup - 2025-01-24T183919.669.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 16,
+    "title": "Questions",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T223939.455.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T224033.323.jpg",
+      "Artboard 1 Mockup - 2025-01-24T224104.433.jpg",
+      "Artboard 1 Mockup - 2025-01-24T224310.083.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 17,
+    "title": "Sandwich",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T222745.283.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T223212.100.jpg",
+      "Artboard 1 Mockup - 2025-01-24T223236.227.jpg",
+      "Artboard 1 Mockup - 2025-01-24T223249.199.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 18,
+    "title": "Scene Kya hai",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T215102.836.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T215108.890.jpg",
+      "Artboard 1 Mockup - 2025-01-24T215116.398.jpg",
+      "Artboard 1 Mockup - 2025-01-24T215122.997.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 19,
+    "title": "Seefood",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T225831.880.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T230004.129.jpg",
+      "Artboard 1 Mockup - 2025-01-24T230018.911.jpg",
+      "Artboard 1 Mockup - 2025-01-24T230029.258.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 20,
+    "title": "Stealth On",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T182341.411.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T182355.309.jpg",
+      "Artboard 1 Mockup - 2025-01-24T185012.684.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 21,
+    "title": "Acha..",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T000429.297.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T000442.651.jpg",
+      "Artboard 1 Mockup - 2025-01-25T000459.806.jpg",
+      "Artboard 1 Mockup - 2025-01-25T000449.961.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 22,
+    "title": "Argue",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T234430.020.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T234755.793.jpg",
+      "Artboard 1 Mockup - 2025-01-24T234954.409.jpg",
+      "Artboard 1 Mockup - 2025-01-24T235015.278.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 23,
+    "title": "Coffee",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-24T235356.775.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-24T235404.719.jpg",
+      "Artboard 1 Mockup - 2025-01-24T235411.800.jpg",
+      "Artboard 1 Mockup - 2025-01-24T235727.511.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 24,
+    "title": "Fucupcakes",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T003225.094.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T003242.333.jpg",
+      "Artboard 1 Mockup - 2025-01-25T003300.493.jpg",
+      "Artboard 1 Mockup - 2025-01-25T003728.158.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 25,
+    "title": "Golden Fry",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T004118.452.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T004132.317.jpg",
+      "Artboard 1 Mockup - 2025-01-25T004146.006.jpg",
+      "Artboard 1 Mockup - 2025-01-25T004344.809.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 26,
+    "title": "Just Wing It",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T174257.876.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T174305.797.jpg",
+      "Artboard 1 Mockup - 2025-01-25T174320.768.jpg",
+      "Artboard 1 Mockup - 2025-01-25T174348.707.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 27,
+    "title": "Patakha",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T181901.997.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T181918.946.jpg",
+      "Artboard 1 Mockup - 2025-01-25T181938.549.jpg",
+      "Artboard 1 Mockup - 2025-01-25T181946.034.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 28,
+    "title": "Tension Transfer",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T182556.200.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T182603.867.jpg",
+      "Artboard 1 Mockup - 2025-01-25T182612.915.jpg",
+      "Artboard 1 Mockup - 2025-01-25T182745.743.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 29,
+    "title": "Kawai Queen",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T181613.195.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T181621.026.jpg",
+      "Artboard 1 Mockup - 2025-01-25T181631.696.jpg",
+      "Artboard 1 Mockup - 2025-01-25T181643.551.jpg"
+    ],
+    "price": 699,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "T-shirt",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 30,
+    "title": "Hectic",
+    "srcUrl": "Hectic White.jpg",
+    "gallery": [
+      "Hectic Blue.jpg",
+      "Hectic Black.jpg",
+      "Hectic Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 31,
+    "title": "Satoru",
+    "srcUrl": "Satoru Black.jpg",
+    "gallery": [
+      "Satoru Blue.jpg",
+      "Satoru Grey.jpg",
+      "Satoru White.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 32,
+    "title": "Firemode",
+    "srcUrl": "Firemode Black.jpg",
+    "gallery": [
+      "Firemode White.jpg",
+      "Firemode Blue.jpg",
+      "Firemode Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 33,
+    "title": "Destiny",
+    "srcUrl": "Destiny Blue.jpg",
+    "gallery": [
+      "Destiny White.jpg",
+      "Destiny Black.jpg",
+      "Destiny Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 34,
+    "title": "Chaos Within",
+    "srcUrl": "Chaos Within Black.jpg",
+    "gallery": [
+      "Chaos Within White.jpg",
+      "Chaos Within Blue.jpg",
+      "Chaos Within Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 35,
+    "title": "Level 99 Boss",
+    "srcUrl": "Level 99 Boss Blue.png",
+    "gallery": [
+      "Level 99 Boss Grey.png",
+      "Level 99 Boss White.png",
+      "Level 99 Boss Black.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 36,
+    "title": "Press Start",
+    "srcUrl": "Press Start White.jpg",
+    "gallery": [
+      "Press Start Blue.jpg",
+      "Press Start Black.jpg",
+      "Press Start Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 37,
+    "title": "Game Over",
+    "srcUrl": "Game Over Black.jpg",
+    "gallery": [
+      "Game Over White.jpg",
+      "Game Over Grey.jpg",
+      "Game Over Blue.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 38,
+    "title": "Night Walker",
+    "srcUrl": "Night Walker Black.jpg",
+    "gallery": [
+      "Night Walker Blue.jpg",
+      "Night Walker Grey.jpg",
+      "Night Walker White.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 39,
+    "title": "Born to Play",
+    "srcUrl": "Born to play white.jpg",
+    "gallery": [
+      "Born to play blue.jpg",
+      "Born to play grey.jpg",
+      "Born to play black.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Men",
+    "rating": 0
+  },
+  {
+    "id": 40,
+    "title": "Freedom",
+    "srcUrl": "Freedom White.jpg",
+    "gallery": [
+      "Freedom Black.jpg",
+      "Freedom Blue.jpg",
+      "Freedom Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 41,
+    "title": "Beauty",
+    "srcUrl": "Beauty White.png",
+    "gallery": [
+      "Beauty Black.png",
+      "Beauty Grey.png",
+      "Beauty Blue.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 42,
+    "title": "Shadow Rise",
+    "srcUrl": "Shadow Rise Black.png",
+    "gallery": [
+      "Shadow Rise Grey.png",
+      "Shadow Rise White .png",
+      "Shadow Rise Blue.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 43,
+    "title": "Lost in the vibe",
+    "srcUrl": "Lost in the Vibe Grey.png",
+    "gallery": [
+      "Lost in the Vibe Blue.png",
+      "Lost in the Vibe White.png",
+      "Lost in the Vibe Black.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 44,
+    "title": "Seoul Street",
+    "srcUrl": "Seoul Street Grey.jpg",
+    "gallery": [
+      "Seoul Street White.jpg",
+      "Seoul Street Blue.jpg",
+      "Seoul Street Black.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 45,
+    "title": "Into the Void",
+    "srcUrl": "Into the Void white.jpg",
+    "gallery": [
+      "Into the Void Grey.jpg",
+      "Into the Void Black.jpg",
+      "Into the Void Blue.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 46,
+    "title": "Keep Flourishing",
+    "srcUrl": "Keep Flourishing White.png",
+    "gallery": [
+      "Keep Flourishing Grey.png",
+      "Keep Flourishing Blue.png",
+      "Keep flourishing Black.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 47,
+    "title": "Nurture",
+    "srcUrl": "Nurture Black.jpg",
+    "gallery": [
+      "Nurture White.jpg",
+      "Nurture Grey.jpg",
+      "Nurture Blue.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 48,
+    "title": "Hustle",
+    "srcUrl": "Hustle, Rest, Repeat Black.png",
+    "gallery": [
+      "Hustle, Rest, Repeat Blue.png",
+      "Hustle, Rest, Repeat White.png",
+      "Hustle, Rest, Repeat White.png"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 49,
+    "title": "I love Dish",
+    "srcUrl": "I Love Dish White.jpg",
+    "gallery": [
+      "I Love Dish Blue.jpg",
+      "I Love Dish Black.jpg",
+      "I Love Dish Grey.jpg"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 0
+  },
+  {
+    "id": 50,
+    "title": "Relax",
+    "srcUrl": "Artboard 1 Mockup - 2025-01-25T192447.792.jpg",
+    "gallery": [
+      "Artboard 1 Mockup - 2025-01-25T192620.483.jpg",
+      "Artboard 1 Mockup - 2025-01-25T192653.051.jpg",
+      "Artboard 1 Mockup - 2025-01-25T192704.473.jpg"
+    ],
+    "price": 859,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Oversized tee",
+    "orientation": "Men",
+    "rating": 0
+  }
+]

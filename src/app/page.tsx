@@ -10,13 +10,14 @@ import newArrivalsDataJson from "@/database/newArrivalsData.json";
 import topSellingDataJson from "@/database/topSellingData.json";
 import relatedProductDataJson from "@/database/relatedproductData.json";
 import reviewsDataJson from "@/database/reviews.json";
+import { readExcelAndTransform } from "@/lib/excelReader";
 
 export const newArrivalsData: Product[] = newArrivalsDataJson;
 export const topSellingData: Product[] = topSellingDataJson;
 export const relatedProductData: Product[] = relatedProductDataJson;
 export const reviewsData: Review[] = reviewsDataJson;
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Header />
