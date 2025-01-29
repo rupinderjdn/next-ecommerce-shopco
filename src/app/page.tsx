@@ -6,7 +6,6 @@ import Reviews from "@/components/homepage/Reviews";
 import { Product } from "@/types/product.types";
 import { Review } from "@/types/review.types";
 
-import topSellingDataJson from "@/database/topSellingData.json";
 import relatedProductDataJson from "@/database/relatedproductData.json";
 import reviewsDataJson from "@/database/reviews.json";
 import allProductsDataJson from "@/database/allProducts.json";
@@ -29,16 +28,18 @@ const transformedAllProducts = allProductsDataJson.map(product => ({
   gallery: product.gallery?.map(url => transformUrl(url))
 }));
 
-export const topSellingData: Product[] = topSellingDataJson;
 export const relatedProductData: Product[] = relatedProductDataJson;
 export const reviewsData: Review[] = reviewsDataJson;
 export const allProductsData: Product[] = transformedAllProducts;
 export const newArrivalsData: Product[] = allProductsData.filter(
   (product) => product.badge === "newArrivals"
 );
+export const topSellingData: Product[] = allProductsData.filter(
+  (product) => product.badge === "topSelling"
+);
 
 export default async function Home() {
-  const allProductsLinks = await readExcelAndTransform("products.xlsx");
+  // const allProductsLinks = await readExcelAndTransform("products.xlsx");
   return (
     <>
       <Header />
