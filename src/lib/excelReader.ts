@@ -43,11 +43,29 @@ export const readExcelAndTransform = (filePath: string): Promise<Product[]> => {
           if (url) {
             const fileIdMatch = url.match(/\/d\/(.+?)(?:\/|$)/);
             if (fileIdMatch) {
-              return `https://drive.google.com/uc?export=view&id=${fileIdMatch[1]}`;
+              const fileId = fileIdMatch[1];
+              // Remove any additional parameters after the file ID
+              const cleanFileId = fileId.split('&')[0];
+              return `https://drive.google.com/uc?export=view&id=${cleanFileId}`;
+            }
+            // If URL is already in the correct format, return as is
+            if (url.includes('uc?export=view')) {
+              return url;
             }
           }
           return url;
         });
+        // Transform all URLs to export view format
+        const transformedUrls = variantUrls.map(url => {
+          if (!url) return url;
+          const fileIdMatch = url.match(/id=([^&]+)|\/d\/([^/?&]+)/);
+          if (fileIdMatch) {
+            const fileId = fileIdMatch[1] || fileIdMatch[2];
+            return `https://drive.google.com/uc?export=view&id=${fileId}`;
+          }
+          return url;
+        });
+        variantUrls.splice(0, variantUrls.length, ...transformedUrls);
 
         return {
           id: index + 1,
