@@ -37,7 +37,16 @@ export const readExcelAndTransform = (filePath: string): Promise<Product[]> => {
           
           // Get the hyperlink from the cell if it exists
           const cell = worksheet[cellRef];
-          return cell?.l?.Target || row[variantCol];
+          const url = cell?.l?.Target || row[variantCol];
+          
+          // Transform Google Drive URL format
+          if (url) {
+            const fileIdMatch = url.match(/\/d\/(.+?)(?:\/|$)/);
+            if (fileIdMatch) {
+              return `https://drive.google.com/uc?export=view&id=${fileIdMatch[1]}`;
+            }
+          }
+          return url;
         });
 
         return {

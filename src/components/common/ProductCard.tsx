@@ -16,7 +16,8 @@ const ProductCard = ({ data }: ProductCardProps) => {
     >
       <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
         <Image
-          src={data.srcUrl}
+        src={data.srcUrl}
+          // src="https://drive.google.com/uc?export=view&id=1V4l3J5sji_Tkrq9SaMoIzS996KKwQ6_4"
           width={295}
           height={298}
           className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500"

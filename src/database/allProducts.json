@@ -2,11 +2,11 @@
   {
     "id": 1,
     "title": "Astrocat",
-    "srcUrl": "https://drive.google.com/file/d/13uPj1MPCeoq3r87dHyJz9DeoVeDHcS95/view?usp=drive_link",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=13uPj1MPCeoq3r87dHyJz9DeoVeDHcS95",
     "gallery": [
-      "https://drive.google.com/file/d/1V4l3J5sji_Tkrq9SaMoIzS996KKwQ6_4/view?usp=drive_link",
-      "https://drive.google.com/file/d/1pWd3iGR79HrKwYV5imS1so2BQNM8Djus/view?usp=drive_link",
-      "https://drive.google.com/file/d/1mRb6wvCUQm1h47dCwucz8o1_uNTMSGsp/view?usp=drive_link"
+      "https://drive.google.com/uc?export=view&id=1V4l3J5sji_Tkrq9SaMoIzS996KKwQ6_4",
+      "https://drive.google.com/uc?export=view&id=1pWd3iGR79HrKwYV5imS1so2BQNM8Djus",
+      "https://drive.google.com/uc?export=view&id=1mRb6wvCUQm1h47dCwucz8o1_uNTMSGsp"
     ],
     "price": 699,
     "discount": {
@@ -20,11 +20,11 @@
   {
     "id": 2,
     "title": "Bhai",
-    "srcUrl": "https://drive.google.com/file/d/1lWf2bbjDw_GnS4y6f89PaqQzkoVaQO_f/view?usp=drive_link",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=1lWf2bbjDw_GnS4y6f89PaqQzkoVaQO_f",
     "gallery": [
-      "https://drive.google.com/file/d/1G-tvxXFDCs38JhvUQhmODV73Vr6xvLSt/view?usp=drive_link",
-      "https://drive.google.com/file/d/10EQgDBJin4tkedb3xon4B0eK_ro6cX3q/view?usp=drive_link",
-      "https://drive.google.com/file/d/1DLEXFSe2JyFt2SFd8KMgZtQPU_M5Rd_5/view?usp=drive_link"
+      "https://drive.google.com/uc?export=view&id=1G-tvxXFDCs38JhvUQhmODV73Vr6xvLSt",
+      "https://drive.google.com/uc?export=view&id=10EQgDBJin4tkedb3xon4B0eK_ro6cX3q",
+      "https://drive.google.com/uc?export=view&id=1DLEXFSe2JyFt2SFd8KMgZtQPU_M5Rd_5"
     ],
     "price": 699,
     "discount": {
