@@ -55,18 +55,18 @@ const Header = () => {
             transition={{ delay: 1.5, duration: 0.6 }}
             className="flex md:h-full md:max-h-11 lg:max-h-[52px] xl:max-h-[68px] items-center justify-center md:justify-start flex-wrap sm:flex-nowrap md:space-x-3 lg:space-x-6 xl:space-x-8 md:mb-[116px]"
           >
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">
                 <AnimatedCounter from={0} to={200} />+
               </span>
               <span className="text-xs xl:text-base text-black/60 text-nowrap">
                 International Brands
               </span>
-            </div>
-            <Separator
+            </div> */}
+            {/* <Separator
               className="ml-6 md:ml-0 h-12 md:h-full bg-black/10"
               orientation="vertical"
-            />
+            /> */}
             <div className="flex flex-col ml-6 md:ml-0">
               <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">
                 <AnimatedCounter from={0} to={2000} />+

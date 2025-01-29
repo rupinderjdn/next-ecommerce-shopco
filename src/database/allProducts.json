@@ -245,12 +245,13 @@
     ],
     "price": 699,
     "discount": {
-      "amount": 0,
-      "percentage": 0
+        "amount": 0,
+        "percentage": 0
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 4.5
+    "rating": 4.5,
+    "badge": "newArrivals"
   },
   {
     "id": 15,
@@ -268,6 +269,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
+    "badge": "newArrivals",
     "rating": 4.5
   },
   {

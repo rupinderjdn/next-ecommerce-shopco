@@ -43,7 +43,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <Brands />
+      {/* <Brands /> */}
       <main className="my-[50px] sm:my-[72px]">
         <ProductListSec
           title="NEW ARRIVALS"
