@@ -79,7 +79,8 @@ export const readExcelAndTransform = (filePath: string): Promise<Product[]> => {
           },
           category: row["Garment"],
           orientation: row["Orientation"],
-          rating: 0
+          rating: row["Rating"],
+          badge: row["Badge"]
         };
       });
 

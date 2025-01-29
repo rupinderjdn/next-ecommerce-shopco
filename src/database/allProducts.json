@@ -15,7 +15,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 3,
@@ -51,7 +51,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 4,
@@ -69,7 +69,8 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "newArrivals"
   },
   {
     "id": 5,
@@ -87,7 +88,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 6,
@@ -105,7 +106,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 7,
@@ -123,7 +124,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 8,
@@ -141,7 +142,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 9,
@@ -159,7 +160,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 10,
@@ -177,7 +178,8 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "newArrivals"
   },
   {
     "id": 11,
@@ -195,7 +197,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 12,
@@ -213,7 +215,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 13,
@@ -230,7 +232,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 14,
@@ -242,14 +244,13 @@
       "https://drive.google.com/uc?export=view&id=1bzQm1Fk3EcD5ZEBX2FOC1R11P2M3dxlS"
     ],
     "price": 699,
-    "badge": "topSelling",
     "discount": {
       "amount": 0,
       "percentage": 0
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 15,
@@ -267,7 +268,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 16,
@@ -279,14 +280,14 @@
       "https://drive.google.com/uc?export=view&id=1bLuIoPb7WLMe7Q_Qoc8zP_keG-qgMroe"
     ],
     "price": 699,
-    "badge": "topSelling",
     "discount": {
       "amount": 0,
       "percentage": 0
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "newArrivals"
   },
   {
     "id": 17,
@@ -304,18 +305,17 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 18,
     "title": "Seefood",
     "srcUrl": "https://drive.google.com/uc?export=view&id=1Lz7D6vlZRs5FwlJjQ_bHdC8LXdkd1GPb",
     "gallery": [
-        "https://drive.google.com/uc?export=view&id=1gt6JWt4__7IHR5GKNYItiQ6PDXkBSoci",
-        "https://drive.google.com/uc?export=view&id=11LBoocZD2u78jP7A3qU7FQCO8CIZHgrM",
-        "https://drive.google.com/uc?export=view&id=1UuFQQcSnjNLF95eSTJ7d1X-AiDjq_R52"
+      "https://drive.google.com/uc?export=view&id=1gt6JWt4__7IHR5GKNYItiQ6PDXkBSoci",
+      "https://drive.google.com/uc?export=view&id=11LBoocZD2u78jP7A3qU7FQCO8CIZHgrM",
+      "https://drive.google.com/uc?export=view&id=1UuFQQcSnjNLF95eSTJ7d1X-AiDjq_R52"
     ],
-    "badge": "topSelling",
     "price": 699,
     "discount": {
       "amount": 0,
@@ -323,7 +323,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 19,
@@ -340,7 +340,7 @@
     },
     "category": "T-shirt",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 20,
@@ -358,7 +358,8 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "newArrivals"
   },
   {
     "id": 21,
@@ -376,7 +377,7 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 22,
@@ -394,7 +395,7 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 23,
@@ -406,14 +407,13 @@
       "https://drive.google.com/uc?export=view&id=1UdeqLgZuEjdcJCtQ1-1FN-hJ1nqaX3Yq"
     ],
     "price": 699,
-    "badge": "topSelling",
     "discount": {
       "amount": 0,
       "percentage": 0
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 24,
@@ -429,10 +429,9 @@
       "amount": 0,
       "percentage": 0
     },
-    "badge": "topSelling",
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 25,
@@ -450,7 +449,7 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 26,
@@ -468,7 +467,7 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 27,
@@ -479,7 +478,6 @@
       "https://drive.google.com/uc?export=view&id=1Vn6nAutnLbRRJEm-O9864tpMZGZJIpQv",
       "https://drive.google.com/uc?export=view&id=1320IsGLKodFCjcaF76emAJ5joGxVxsNu"
     ],
-    "badge": "newArrivals",
     "price": 699,
     "discount": {
       "amount": 0,
@@ -505,7 +503,7 @@
     },
     "category": "T-shirt",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 29,
@@ -523,7 +521,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 30,
@@ -541,7 +539,8 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "topSelling"
   },
   {
     "id": 31,
@@ -559,7 +558,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 32,
@@ -577,7 +576,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 33,
@@ -595,7 +594,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 34,
@@ -613,7 +612,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 35,
@@ -631,7 +630,8 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "topSelling"
   },
   {
     "id": 36,
@@ -649,7 +649,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 37,
@@ -667,7 +667,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 38,
@@ -685,7 +685,7 @@
     },
     "category": "Hoodie",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 39,
@@ -703,118 +703,116 @@
     },
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 40,
     "title": "Beauty",
     "srcUrl": "https://drive.google.com/uc?export=view&id=11pD4Iu0D5ly1K-8lyw3mhIzML-hYzSsI",
     "gallery": [
-        "https://drive.google.com/uc?export=view&id=1KXLtR0RiFLGWb1PkcWdSV0n_bE-y38K1",
-        "https://drive.google.com/uc?export=view&id=1up_qeHiuVJUa7KM4kR7HB1AvY4DpZYfK",
-        "https://drive.google.com/uc?export=view&id=1vmlVDfOR05-wGZMgkKsgnXqtldFJn61N"
+      "https://drive.google.com/uc?export=view&id=1KXLtR0RiFLGWb1PkcWdSV0n_bE-y38K1",
+      "https://drive.google.com/uc?export=view&id=1up_qeHiuVJUa7KM4kR7HB1AvY4DpZYfK",
+      "https://drive.google.com/uc?export=view&id=1vmlVDfOR05-wGZMgkKsgnXqtldFJn61N"
     ],
     "price": 1399,
     "discount": {
-        "amount": 0,
-        "percentage": 0
+      "amount": 0,
+      "percentage": 0
     },
-    "badge": "newArrivals",
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
-},
-{
+    "rating": 4.5
+  },
+  {
     "id": 41,
     "title": "Shadow Rise",
     "srcUrl": "https://drive.google.com/uc?export=view&id=1bxuO_T7ZMA2mFMMR5tY0rPaBq0r7eKzS",
     "gallery": [
-        "https://drive.google.com/uc?export=view&id=1e6K6IRaUTgi96g4bRg0DFGdqRsE9a1-f",
-        "https://drive.google.com/uc?export=view&id=1vM2tRtX0FS3aA_5UGlx7QvxkueatQnr3",
-        "https://drive.google.com/uc?export=view&id=1DZAK-WOsQBmNbr16LE2rmP1rO1kdlp57"
+      "https://drive.google.com/uc?export=view&id=1e6K6IRaUTgi96g4bRg0DFGdqRsE9a1-f",
+      "https://drive.google.com/uc?export=view&id=1vM2tRtX0FS3aA_5UGlx7QvxkueatQnr3",
+      "https://drive.google.com/uc?export=view&id=1DZAK-WOsQBmNbr16LE2rmP1rO1kdlp57"
     ],
     "price": 1399,
     "discount": {
-        "amount": 0,
-        "percentage": 0
+      "amount": 0,
+      "percentage": 0
     },
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
-      "id": 42,
-      "title": "Lost in the vibe",
-      "srcUrl": "https://drive.google.com/uc?export=view&id=1lSs4tGihUFB_SjKeYCeqR_zsGK4geB34",
-      "gallery": [
-          "https://drive.google.com/uc?export=view&id=1F5HFsLLXdf0rty7JrNGK55Yg7WwoQDCO",
-          "https://drive.google.com/uc?export=view&id=1uThnKBdklRpEMAK86aWGE2v0LKyNXYZM",
-          "https://drive.google.com/uc?export=view&id=1hQEuZ6Dr67TV5lvVUWr4kkWAykFpYz3D"
-        ],
-        "price": 1399,
-        "discount": {
-            "amount": 0,
-            "percentage": 0
-        },
-        "category": "Hoodie",
-        "orientation": "Women",
-        "badge": "newArrivals",
-        "rating": 0
+    "id": 42,
+    "title": "Lost in the vibe",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=1lSs4tGihUFB_SjKeYCeqR_zsGK4geB34",
+    "gallery": [
+      "https://drive.google.com/uc?export=view&id=1F5HFsLLXdf0rty7JrNGK55Yg7WwoQDCO",
+      "https://drive.google.com/uc?export=view&id=1uThnKBdklRpEMAK86aWGE2v0LKyNXYZM",
+      "https://drive.google.com/uc?export=view&id=1hQEuZ6Dr67TV5lvVUWr4kkWAykFpYz3D"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
     },
-    {
-        "id": 43,
-        "title": "Seoul Street",
-        "srcUrl": "https://drive.google.com/uc?export=view&id=1wpBynf6i6HiOH0VW1A1y5M3b-JMp184z",
-        "gallery": [
-            "https://drive.google.com/uc?export=view&id=1GFHHZ_ZWc0VTPD54OsjHveD2GuiJV2ux",
-            "https://drive.google.com/uc?export=view&id=1_pn4iUjt-pzNgIamfo2aS3hYFFK6x9pd",
-            "https://drive.google.com/uc?export=view&id=1O7C0IU2378iLyLpMml50DHrs5ZO0qxZW"
-        ],
-        "price": 1399,
-        "discount": {
-            "amount": 0,
-            "percentage": 0
-        },
-        "category": "Hoodie",
-        "orientation": "Women",
-        "rating": 0
-    },
-  {
-      "id": 44,
-      "title": "Into the Void",
-      "srcUrl": "https://drive.google.com/uc?export=view&id=1GWRaPa-GS9tILDM9XKTEe3JTKixpSmkn",
-      "gallery": [
-          "https://drive.google.com/uc?export=view&id=1LZP2n38GUXbnKWmNI06aZExZWfAcEM6X",
-          "https://drive.google.com/uc?export=view&id=1QKu5qFXbHYwn-bqe2rvjjRYp-MW9nAAn",
-          "https://drive.google.com/uc?export=view&id=1ogrfuJmahknC9a2lSY4Q0WYd_Py17A-A"
-        ],
-        "price": 1399,
-        "discount": {
-            "amount": 0,
-            "percentage": 0
-        },
-        "category": "Hoodie",
-        "orientation": "Women",
-        "rating": 0
-    },
-    {
-        "id": 45,
-        "title": "Keep Flourishing",
-        "srcUrl": "https://drive.google.com/uc?export=view&id=1ULPAIjBLG3PePuBSf3bYo0v2qVjV2b6p",
-        "gallery": [
-            "https://drive.google.com/uc?export=view&id=12_8aA20A2q-V4k0B_8O5F4IbNZqcWV8i",
-            "https://drive.google.com/uc?export=view&id=1nEnqThqyZYWKzVQUdFl4ym5fugrsfQD-",
-            "https://drive.google.com/uc?export=view&id=1SIr8ADNtFTkCkgJaDeFUxa-fxuuzeX_-"
-        ],
-        "price": 1399,
-        "discount": {
-            "amount": 0,
-            "percentage": 0
-        },
-        "category": "Hoodie",
-        "badge": "newArrivals",
+    "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "topSelling"
+  },
+  {
+    "id": 43,
+    "title": "Seoul Street",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=1wpBynf6i6HiOH0VW1A1y5M3b-JMp184z",
+    "gallery": [
+      "https://drive.google.com/uc?export=view&id=1GFHHZ_ZWc0VTPD54OsjHveD2GuiJV2ux",
+      "https://drive.google.com/uc?export=view&id=1_pn4iUjt-pzNgIamfo2aS3hYFFK6x9pd",
+      "https://drive.google.com/uc?export=view&id=1O7C0IU2378iLyLpMml50DHrs5ZO0qxZW"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 4.5
+  },
+  {
+    "id": 44,
+    "title": "Into the Void",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=1GWRaPa-GS9tILDM9XKTEe3JTKixpSmkn",
+    "gallery": [
+      "https://drive.google.com/uc?export=view&id=1LZP2n38GUXbnKWmNI06aZExZWfAcEM6X",
+      "https://drive.google.com/uc?export=view&id=1QKu5qFXbHYwn-bqe2rvjjRYp-MW9nAAn",
+      "https://drive.google.com/uc?export=view&id=1ogrfuJmahknC9a2lSY4Q0WYd_Py17A-A"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 4.5
+  },
+  {
+    "id": 45,
+    "title": "Keep Flourishing",
+    "srcUrl": "https://drive.google.com/uc?export=view&id=1ULPAIjBLG3PePuBSf3bYo0v2qVjV2b6p",
+    "gallery": [
+      "https://drive.google.com/uc?export=view&id=12_8aA20A2q-V4k0B_8O5F4IbNZqcWV8i",
+      "https://drive.google.com/uc?export=view&id=1nEnqThqyZYWKzVQUdFl4ym5fugrsfQD-",
+      "https://drive.google.com/uc?export=view&id=1SIr8ADNtFTkCkgJaDeFUxa-fxuuzeX_-"
+    ],
+    "price": 1399,
+    "discount": {
+      "amount": 0,
+      "percentage": 0
+    },
+    "category": "Hoodie",
+    "orientation": "Women",
+    "rating": 4.5
   },
   {
     "id": 46,
@@ -832,7 +830,8 @@
     },
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5,
+    "badge": "topSelling"
   },
   {
     "id": 47,
@@ -850,7 +849,7 @@
     },
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 48,
@@ -868,7 +867,7 @@
     },
     "category": "Hoodie",
     "orientation": "Women",
-    "rating": 0
+    "rating": 4.5
   },
   {
     "id": 49,
@@ -886,6 +885,6 @@
     },
     "category": "Oversized tee",
     "orientation": "Men",
-    "rating": 0
+    "rating": 4.5
   }
 ]
