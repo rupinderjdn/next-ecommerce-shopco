@@ -60,13 +60,13 @@ const data: NavMenu = [
     url: "/shop#new-arrivals",
     children: [],
   },
-  {
-    id: 4,
-    type: "MenuItem",
-    label: "Brands",
-    url: "/shop#brands",
-    children: [],
-  },
+  // {
+  //   id: 4,
+  //   type: "MenuItem",
+  //   label: "Brands",
+  //   url: "/shop#brands",
+  //   children: [],
+  // },
 ];
 
 const TopNavbar = () => {
@@ -84,7 +84,16 @@ const TopNavbar = () => {
               "text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10",
             ])}
           >
-            SHOP.CO
+            {/* // TODO check for responsiveness */}
+            <Image
+              priority
+              src="/images/Primary_logo.png"
+              height={200}
+              width={200}
+              alt="logo"
+              className=""
+            />
+            {/* SHOP.CO */}
           </Link>
         </div>
         <NavigationMenu className="hidden md:flex mr-2 lg:mr-7">
