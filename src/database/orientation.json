@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "value": "mensClothing",
+        "value": "Men",
         "label": "Men's clothes",
         "description": "In attractive and spectacular colors and designs"
     },
     {
         "id": 2,
-        "value": "womensClothing",
+        "value": "Women",
         "label": "Women's clothes",
         "description": "Ladies, your style and tastes are important to us"
     }

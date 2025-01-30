@@ -23,7 +23,7 @@ const data: NavMenu = [
     children: orientation.map((item) => ({
       id: item.id,
       label: item.label,
-      url: `/shop#${item.value}`,
+      url: `/shop?orientation=${item.value}`,
       description: item.description,
     })),
   },
