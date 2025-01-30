@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "value": "mensClothing",
+        "label": "Men's clothes",
+        "description": "In attractive and spectacular colors and designs"
+    },
+    {
+        "id": 2,
+        "value": "womensClothing",
+        "label": "Women's clothes",
+        "description": "Ladies, your style and tastes are important to us"
+    }
+]

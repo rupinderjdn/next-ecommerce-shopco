@@ -13,38 +13,19 @@ import Image from "next/image";
 import InputGroup from "@/components/ui/input-group";
 import ResTopNavbar from "./ResTopNavbar";
 import CartBtn from "./CartBtn";
-
+import orientation from "@/database/orientation.json";
+//TODO below should go to a config file
 const data: NavMenu = [
   {
     id: 1,
     label: "Shop",
     type: "MenuList",
-    children: [
-      {
-        id: 11,
-        label: "Men's clothes",
-        url: "/shop#men-clothes",
-        description: "In attractive and spectacular colors and designs",
-      },
-      {
-        id: 12,
-        label: "Women's clothes",
-        url: "/shop#women-clothes",
-        description: "Ladies, your style and tastes are important to us",
-      },
-      {
-        id: 13,
-        label: "Kids clothes",
-        url: "/shop#kids-clothes",
-        description: "For all ages, with happy and beautiful colors",
-      },
-      {
-        id: 14,
-        label: "Bags and Shoes",
-        url: "/shop#bag-shoes",
-        description: "Suitable for men, women and all tastes and styles",
-      },
-    ],
+    children: orientation.map((item) => ({
+      id: item.id,
+      label: item.label,
+      url: `/shop#${item.value}`,
+      description: item.description,
+    })),
   },
   {
     id: 2,
