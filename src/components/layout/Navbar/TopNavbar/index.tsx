@@ -62,17 +62,16 @@ const TopNavbar = () => {
             href="/"
             className={cn([
               integralCF.className,
-              "text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10",
+              "text-2xl lg:text-[32px] mr-3 ",
             ])}
           >
-            {/* // TODO check for responsiveness */}
             <Image
               priority
               src="/images/Primary_logo.png"
               height={200}
               width={200}
               alt="logo"
-              className=""
+              className="w-[80px] h-auto  md:w-[120px] lg:w-[160px]"
             />
             {/* SHOP.CO */}
           </Link>

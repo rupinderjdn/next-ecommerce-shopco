@@ -37,7 +37,14 @@ const ResTopNavbar = ({ data }: { data: NavMenu }) => {
           <SheetTitle asChild>
             <SheetClose asChild>
               <Link href="/" className={cn([integralCF.className, "text-2xl"])}>
-                SHOP.CO
+              <Image
+              priority
+              src="/images/Primary_logo.png"
+              height={200}
+              width={200}
+              alt="logo"
+              className="w-[80px] h-auto  md:w-[120px] lg:w-[160px]"
+            />
               </Link>
             </SheetClose>
           </SheetTitle>
