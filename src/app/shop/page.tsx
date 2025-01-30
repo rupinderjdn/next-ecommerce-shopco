@@ -11,7 +11,7 @@ import {
 import MobileFilters from "@/components/shop-page/filters/MobileFilters";
 import Filters from "@/components/shop-page/filters";
 import { FiSliders } from "react-icons/fi";
-import { allProductsData, newArrivalsData, relatedProductData, topSellingData } from "../page";
+import { allProductsData, newArrivalsData, relatedProductData, topSellingData } from "../";
 import ProductCard from "@/components/common/ProductCard";
 import {
   Pagination,
