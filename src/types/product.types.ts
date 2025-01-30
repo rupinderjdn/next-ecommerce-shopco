@@ -3,6 +3,8 @@ export type Discount = {
   percentage: number;
 };
 
+
+// TODO need stock info size info and color info
 // TODO don't knwo what is related products
 export type Badge = "newArrivals" | "topSelling" | "relatedProducts" | "sale";
 export type Product = {
