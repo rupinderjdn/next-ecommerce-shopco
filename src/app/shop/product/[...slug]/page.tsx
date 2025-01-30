@@ -1,8 +1,4 @@
-import {
-  newArrivalsData,
-  relatedProductData,
-  topSellingData,
-} from "@/app/page";
+import allProductsData  from "@/database/allProducts.json";
 import ProductListSec from "@/components/common/ProductListSec";
 import BreadcrumbProduct from "@/components/product-page/BreadcrumbProduct";
 import Header from "@/components/product-page/Header";
@@ -11,9 +7,7 @@ import { Product } from "@/types/product.types";
 import { notFound } from "next/navigation";
 
 const data: Product[] = [
-  ...newArrivalsData,
-  ...topSellingData,
-  ...relatedProductData,
+  ...allProductsData,
 ];
 
 export default function ProductPage({
@@ -39,9 +33,10 @@ export default function ProductPage({
         </section>
         <Tabs />
       </div>
-      <div className="mb-[50px] sm:mb-20">
+      {/* // TODO related products should have a linkage */}
+      {/* <div className="mb-[50px] sm:mb-20">
         <ProductListSec title="You might also like" data={relatedProductData} />
-      </div>
+      </div> */}
     </main>
   );
 }

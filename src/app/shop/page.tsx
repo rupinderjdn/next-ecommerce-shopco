@@ -30,7 +30,17 @@ export default function ShopPage() {
   
   const searchParams = useSearchParams();
   const style = searchParams.get("orientation");
-  const products = allProductsData.filter((product : Product) => product.orientation === style);
+  const badge = searchParams.get("badge");
+  if(!style && !badge){
+    return <div>No products found</div>
+  }
+  let products = allProductsData;
+  if(style){
+    products = allProductsData.filter((product : Product) => product.orientation === style);
+  }
+  if(badge){
+    products = products.filter((product : Product) => product.badge === badge);
+  }
 
   return (
     <main className="pb-20">

@@ -740,6 +740,7 @@
       "percentage": 0
     },
     "category": "Hoodie",
+    "badge": "onSale",
     "orientation": "Women",
     "rating": 4.5
   },
@@ -834,58 +835,61 @@
     "orientation": "Women",
     "rating": 4.5,
     "badge": "topSelling"
-  },
-  {
+},
+{
     "id": 47,
     "title": "Hustle",
     "srcUrl": "https://drive.google.com/uc?export=view&id=14uwuhxjxElJrXcFNMhScqbbi3xZJa2pu",
     "gallery": [
-      "https://drive.google.com/uc?export=view&id=1GdXlzOihIgcAIKJoMOEoEBYFP77uWVaG",
-      "https://drive.google.com/uc?export=view&id=1wIeHNiPR8iZSw-0EnlhCe7VKvdvZgzSS",
-      "https://drive.google.com/uc?export=view&id=1wIeHNiPR8iZSw-0EnlhCe7VKvdvZgzSS"
+        "https://drive.google.com/uc?export=view&id=1GdXlzOihIgcAIKJoMOEoEBYFP77uWVaG",
+        "https://drive.google.com/uc?export=view&id=1wIeHNiPR8iZSw-0EnlhCe7VKvdvZgzSS",
+        "https://drive.google.com/uc?export=view&id=1wIeHNiPR8iZSw-0EnlhCe7VKvdvZgzSS"
     ],
     "price": 1399,
     "discount": {
-      "amount": 0,
-      "percentage": 0
+        "amount": 0,
+        "percentage": 0
     },
     "category": "Hoodie",
     "orientation": "Women",
+    "badge": "onSale",
     "rating": 4.5
-  },
-  {
+},
+{
     "id": 48,
     "title": "I love Dish",
     "srcUrl": "https://drive.google.com/uc?export=view&id=1NeWc1NNkCBtEp9Tc9p2mB70qNKBl3F2H",
     "gallery": [
-      "https://drive.google.com/uc?export=view&id=1Ro7AsxWkLKjBIH97O05L7NC65SuWzi81",
-      "https://drive.google.com/uc?export=view&id=1nfEcCgcCVrEK4GNHvWwPZuGMomclZzdU",
-      "https://drive.google.com/uc?export=view&id=1eW-DMa3O7BcM1vC1ANXTEzNJGeAg8cU6"
+        "https://drive.google.com/uc?export=view&id=1Ro7AsxWkLKjBIH97O05L7NC65SuWzi81",
+        "https://drive.google.com/uc?export=view&id=1nfEcCgcCVrEK4GNHvWwPZuGMomclZzdU",
+        "https://drive.google.com/uc?export=view&id=1eW-DMa3O7BcM1vC1ANXTEzNJGeAg8cU6"
     ],
     "price": 1399,
     "discount": {
-      "amount": 0,
-      "percentage": 0
+        "amount": 0,
+        "percentage": 0
     },
     "category": "Hoodie",
+    "badge": "onSale",
     "orientation": "Women",
     "rating": 4.5
-  },
-  {
+},
+{
     "id": 49,
     "title": "Relax",
     "srcUrl": "https://drive.google.com/uc?export=view&id=1ktbhzAg4MxnSdLwmQs_He0AVAXOsAvQr",
     "gallery": [
-      "https://drive.google.com/uc?export=view&id=1DpsFOOXeEYkLPiQ3POtiTLxRrQjmo_UF",
-      "https://drive.google.com/uc?export=view&id=1uRJIO3cUtzVivzitfRiWccSmGu8-MoLf",
-      "https://drive.google.com/uc?export=view&id=1iXC_4SHUBy6PK9pALPlkyTKKBCaKb0xT"
+        "https://drive.google.com/uc?export=view&id=1DpsFOOXeEYkLPiQ3POtiTLxRrQjmo_UF",
+        "https://drive.google.com/uc?export=view&id=1uRJIO3cUtzVivzitfRiWccSmGu8-MoLf",
+        "https://drive.google.com/uc?export=view&id=1iXC_4SHUBy6PK9pALPlkyTKKBCaKb0xT"
     ],
     "price": 859,
     "discount": {
-      "amount": 0,
-      "percentage": 0
+        "amount": 0,
+        "percentage": 0
     },
     "category": "Oversized tee",
+    "badge": "onSale",
     "orientation": "Men",
     "rating": 4.5
   }

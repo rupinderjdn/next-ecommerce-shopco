@@ -17,5 +17,6 @@ export type Product = {
   subCategory?: string; //TODO this subcategory can be used for sale new arrivals and top selling
   brand?: string;
   badge?: string ; //TODO erro happening when doing Badge type need to handle in future
+  // TODO badge should be an array of Badge type
   orientation?: string;
 };

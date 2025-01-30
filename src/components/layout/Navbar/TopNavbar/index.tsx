@@ -31,14 +31,14 @@ const data: NavMenu = [
     id: 2,
     type: "MenuItem",
     label: "On Sale",
-    url: "/shop#on-sale",
+    url: "/shop?badge=onSale",
     children: [],
   },
   {
     id: 3,
     type: "MenuItem",
     label: "New Arrivals",
-    url: "/shop#new-arrivals",
+    url: "/shop?badge=newArrivals",
     children: [],
   },
   // {
