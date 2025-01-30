@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
@@ -14,6 +15,10 @@ import InputGroup from "@/components/ui/input-group";
 import ResTopNavbar from "./ResTopNavbar";
 import CartBtn from "./CartBtn";
 import orientation from "@/database/orientation.json";
+import { SelectInput, SelectInputProps } from "@/components/common/SelectInput/SelectInput";
+import { Option } from "@/components/common/SelectInput/SelectInputModel";
+import { allProductsData } from "@/app/index";
+import { Product } from "@/types/product.types";
 //TODO below should go to a config file
 const data: NavMenu = [
   {
@@ -50,7 +55,29 @@ const data: NavMenu = [
   // },
 ];
 
+
 const TopNavbar = () => {
+  const options: Option[] = allProductsData.map((product: Product) => ({
+    optionLabel: product.title,
+    label: product.title,
+    value: product.id,
+  }));
+
+  const selectInputProps: SelectInputProps = React.useMemo(
+    () => ({
+      showSearchIcon: true,
+      placeholder: "Search",
+      options,
+      className: "w-full",
+      optionsClassName: "max-h-[50vh]",
+      // value: "1",
+      id: "select-company-at-home-page",
+      onChange: () => {},
+      // onSearch: () => {},
+    }),
+    [options]
+  );
+  
   return (
     <nav className="sticky top-0 bg-white z-20">
       <div className="flex relative max-w-frame mx-auto items-center justify-between md:justify-start py-5 md:py-6 px-4 xl:px-0">
@@ -90,7 +117,7 @@ const TopNavbar = () => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <InputGroup className="hidden md:flex bg-[#F0F0F0] mr-3 lg:mr-10">
+        {/* <InputGroup className="hidden md:flex bg-[#F0F0F0] mr-3 lg:mr-10">
           <InputGroup.Text>
             <Image
               priority
@@ -107,7 +134,10 @@ const TopNavbar = () => {
             placeholder="Search for products..."
             className="bg-transparent placeholder:text-black/40"
           />
-        </InputGroup>
+        </InputGroup> */}
+                    <div className="flex flex-1 shrink gap-2 border border-black/10 p-2 mr-2 rounded-full items-center self-stretch my-auto w-full basis-0  max-md:max-w-full">
+              <SelectInput {...selectInputProps} />
+            </div>
         <div className="flex items-center">
           <Link href="/search" className="block md:hidden mr-[14px] p-1">
             <Image

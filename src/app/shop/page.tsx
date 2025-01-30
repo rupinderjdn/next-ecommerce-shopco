@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/pagination";
 import { useSearchParams } from "next/navigation";
 import { Product } from "@/types/product.types";
+import React from "react";
 
 export default function ShopPage() {
 
@@ -31,15 +32,12 @@ export default function ShopPage() {
   const searchParams = useSearchParams();
   const style = searchParams.get("orientation");
   const badge = searchParams.get("badge");
-  if(!style && !badge){
-    return <div>No products found</div>
-  }
   let products = allProductsData;
   if(style){
-    products = allProductsData.filter((product : Product) => product.orientation === style);
+    products = React.useMemo(() => allProductsData.filter((product : Product) => product.orientation === style), [style] );
   }
   if(badge){
-    products = products.filter((product : Product) => product.badge === badge);
+    products = React.useMemo(() => products.filter((product : Product) => product.badge === badge), [badge]   );
   }
 
   return (
