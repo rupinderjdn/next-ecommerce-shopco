@@ -80,7 +80,10 @@ export const readExcelAndTransform = (filePath: string): Promise<Product[]> => {
           category: row["Garment"],
           orientation: row["Orientation"],
           rating: row["Rating"],
-          badge: row["Badge"]
+          badge: row["Badge"],
+          // description: row["Description"],
+          // details: row["Details"],
+          // stockInfo: ,
         };
       });
 

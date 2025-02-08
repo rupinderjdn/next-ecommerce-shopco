@@ -3,6 +3,11 @@ export type Discount = {
   percentage: number;
 };
 
+export type StockInfo = {
+  size: string;
+  colors: string[];
+  quantity: number;
+};
 
 // TODO need stock info size info and color info
 // TODO don't knwo what is related products
@@ -21,4 +26,9 @@ export type Product = {
   badge?: string ; //TODO erro happening when doing Badge type need to handle in future
   // TODO badge should be an array of Badge type
   orientation?: string;
+  // description: string;
+  // details: string;
+  // stockInfo: StockInfo[];
+  // TODO need to add more fields
+  // relatedProducts?: Product[];
 };
