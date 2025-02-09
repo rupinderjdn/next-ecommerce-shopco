@@ -19,14 +19,6 @@ export default function AdminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={satoshi.className}>
-        <HolyLoader color="#868686" />
-        <Providers>
-          {/* Add your admin-specific navigation here */}
           <main>{children}</main>
-        </Providers>
-      </body>
-    </html>
   );
 }

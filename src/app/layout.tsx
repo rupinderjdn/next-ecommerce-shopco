@@ -27,6 +27,7 @@ export default function RootLayout({
         <HolyLoader color="#868686" />
         <TopBanner />
         <Providers>
+          {/* // TODO might have to remove this navabr from here and add it to the layouts where it is needed */}
           <TopNavbar />
           {children}
         </Providers>

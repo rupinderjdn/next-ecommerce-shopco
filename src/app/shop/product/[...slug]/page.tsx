@@ -12,9 +12,10 @@ const data: Product[] = [
 
 export default function ProductPage({
   params,
-}: {
+}: { 
   params: { slug: string[] };
 }) {
+  console.log(params);
   const productData = data.find(
     (product) => product.id === Number(params.slug[0])
   );

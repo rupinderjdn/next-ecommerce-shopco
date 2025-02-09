@@ -26,7 +26,7 @@ export type Product = {
   badge?: string ; //TODO erro happening when doing Badge type need to handle in future
   // TODO badge should be an array of Badge type
   orientation?: string;
-  // description: string;
+  description?: string;
   // details: string;
   // stockInfo: StockInfo[];
   // TODO need to add more fields
