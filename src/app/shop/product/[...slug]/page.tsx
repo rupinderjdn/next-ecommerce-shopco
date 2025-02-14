@@ -16,7 +16,7 @@ export default function ProductPage({
   params: { slug: string[] };
 }) {
   console.log(params);
-  const productData = data.find(
+  const productData : Product | undefined = data.find(
     (product) => product.id === Number(params.slug[0])
   );
 

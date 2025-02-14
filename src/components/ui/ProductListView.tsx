@@ -89,24 +89,24 @@ const ProductList = ({ data }: ProductListProps) => {
           )}
         </div>
         <div id="admin-product-list-view-button" className="flex items-center gap-2">
-          <button 
-            onClick={() => window.location.href = `/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
+          <Link 
+            href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
             className="bg-blue-500 text-white px-4 py-2 rounded-md"
           >
             View
-          </button>
-          <button 
-            onClick={() => window.location.href = `/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
+          </Link>
+          <Link 
+            href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
             className="bg-yellow-500 text-white px-4 py-2 rounded-md"
           >
             Edit
-          </button>
-          <button 
-            onClick={() => window.location.href = `/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
+          </Link>
+          <Link 
+            href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
             className="bg-red-500 text-white px-4 py-2 rounded-md"
           >
             Delete
-          </button>
+          </Link>
         </div>
       </div>
     </div>
