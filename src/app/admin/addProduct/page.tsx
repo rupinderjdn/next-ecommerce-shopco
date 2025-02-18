@@ -5,8 +5,8 @@ import { SelectInput } from '@/components/common/SelectInput/SelectInput';
 import { Product, Discount } from '@/types/product.types';
 
 const AddProductPage = () => {
-  const [product, setProduct] = useState<Partial<Product>>({
-    discount: { amount: 0, percentage: 0 } as Discount,
+  const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
+    discount: { amount: 0, percentage: 0 },
     rating: 0
   });
 
@@ -18,13 +18,13 @@ const AddProductPage = () => {
   };
 
   const handleDiscountChange = (field: keyof Discount, value: number) => {
-    // setProduct(prev => ({
-    //   ...prev,
-    //   discount: {
-    //     ...prev.discount,
-    //     [field]: value
-    //   }
-    // }));
+    setProduct(prev => ({
+      ...prev,
+      discount: {
+        ...prev.discount,
+        [field]: value
+      }
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -99,10 +99,11 @@ const AddProductPage = () => {
                   type="number"
                   value={product.discount?.percentage}
                   onChange={(e) => handleDiscountChange('percentage', Number(e.target.value))}
-                  placeholder="0"
+                  placeholder="0.00"
                   boundaryClass="flex items-center w-full border"
                   onClear={() => handleDiscountChange('percentage', 0)}
                 />
+                
               </div>
 
               <div>
@@ -111,7 +112,7 @@ const AddProductPage = () => {
                   type="number"
                   value={product.discount?.amount}
                   onChange={(e) => handleDiscountChange('amount', Number(e.target.value))}
-                  placeholder="0"
+                  placeholder="0.00"
                   boundaryClass="flex items-center w-full border"
                   onClear={() => handleDiscountChange('amount', 0)}
                 />
