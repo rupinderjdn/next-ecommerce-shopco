@@ -6,6 +6,13 @@ import { Product, Discount } from '@/types/product.types';
 
 const AddProductPage = () => {
   const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
+    title: '',
+    price: 0,
+    category: '',
+    brand: '',
+    srcUrl: '',
+    description: '',
+    finalPrice: 0,
     discount: { amount: 0, percentage: 0 },
     rating: 0
   });
@@ -13,8 +20,10 @@ const AddProductPage = () => {
   useEffect(() => {
     if (product.price && product.discount.percentage) {
       const discountAmount = (product.price * product.discount.percentage) / 100;
+      const finalPrice = product.price - discountAmount;
       setProduct(prev => ({
         ...prev,
+        finalPrice,
         discount: {
           ...prev.discount,
           amount: discountAmount
@@ -112,7 +121,7 @@ const AddProductPage = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Discount Percentage</label>
                 <TextInput
                   type="number"
-                  value={product.discount?.percentage}
+                  value={product.discount.percentage}
                   onChange={(e) => handleDiscountChange('percentage', Number(e.target.value))}
                   placeholder="0.00"
                   boundaryClass="flex items-center w-full border"
@@ -125,7 +134,18 @@ const AddProductPage = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Discount Amount</label>
                 <TextInput
                   type="number"
-                  value={product.discount?.amount}
+                  value={product.discount.amount}
+                  placeholder="0.00"
+                  boundaryClass="flex items-center w-full border"
+                  disabled
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Final Price</label>
+                <TextInput
+                  type="number"
+                  value={product.finalPrice}
                   placeholder="0.00"
                   boundaryClass="flex items-center w-full border"
                   disabled
@@ -147,7 +167,7 @@ const AddProductPage = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
               <textarea
-                value={product.description}
+                value={product.description || ''}
                 onChange={(e) => handleInputChange('description', e.target.value)}
                 rows={4}
                 className="w-full border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-200"
