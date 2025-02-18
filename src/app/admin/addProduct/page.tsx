@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TextInput from '@/components/common/TextInput/TextInput';
 import { SelectInput } from '@/components/common/SelectInput/SelectInput';
 import { Product, Discount } from '@/types/product.types';
@@ -10,6 +10,19 @@ const AddProductPage = () => {
     rating: 0
   });
 
+  useEffect(() => {
+    if (product.price && product.discount.percentage) {
+      const discountAmount = (product.price * product.discount.percentage) / 100;
+      setProduct(prev => ({
+        ...prev,
+        discount: {
+          ...prev.discount,
+          amount: discountAmount
+        }
+      }));
+    }
+  }, [product.price, product.discount.percentage]);
+
   const handleInputChange = (field: keyof Product, value: any) => {
     setProduct(prev => ({
       ...prev,
@@ -18,13 +31,15 @@ const AddProductPage = () => {
   };
 
   const handleDiscountChange = (field: keyof Discount, value: number) => {
-    setProduct(prev => ({
-      ...prev,
-      discount: {
-        ...prev.discount,
-        [field]: value
-      }
-    }));
+    if (field === 'percentage') {
+      setProduct(prev => ({
+        ...prev,
+        discount: {
+          ...prev.discount,
+          [field]: value
+        }
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -111,10 +126,9 @@ const AddProductPage = () => {
                 <TextInput
                   type="number"
                   value={product.discount?.amount}
-                  onChange={(e) => handleDiscountChange('amount', Number(e.target.value))}
                   placeholder="0.00"
                   boundaryClass="flex items-center w-full border"
-                  onClear={() => handleDiscountChange('amount', 0)}
+                  disabled
                 />
               </div>
             </div>

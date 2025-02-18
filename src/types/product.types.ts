@@ -18,6 +18,7 @@ export type Product = {
   srcUrl: string;
   gallery?: string[];
   price: number;
+  finalPrice: number;
   discount: Discount;
   rating: number;
   category?: string;
