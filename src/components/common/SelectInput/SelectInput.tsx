@@ -15,11 +15,12 @@ export interface SelectInputProps  {
   showSearchIcon?: boolean;
   id: string;
   onSearch?: (value: string) => void;
+  wrapperClassName?: string;
 }
 
 // TODO react-virtualized can be used to optimize the performance
 export const SelectInput = React.forwardRef<HTMLInputElement, SelectInputProps>(
-  ({ className, optionsClassName, options, value, onChange, placeholder, showSearchIcon = true, onSearch, id, ...props }, ref) => {
+  ({ className, wrapperClassName, optionsClassName, options, value, onChange, placeholder, showSearchIcon = true, onSearch, id, ...props }, ref) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [searchTerm, setSearchTerm] = React.useState("");
     const inputRef = React.useRef<HTMLInputElement>(null);
@@ -60,7 +61,7 @@ export const SelectInput = React.forwardRef<HTMLInputElement, SelectInputProps>(
     };
 
     const handleSearchClick = () => {
-      inputRef.current?.focus();
+      inputRef.current?.focus(); 
     };
 
     React.useEffect(() => {
@@ -70,7 +71,7 @@ export const SelectInput = React.forwardRef<HTMLInputElement, SelectInputProps>(
     }, [selectedOption]);
 
     return (
-      <div ref={containerRef} className="relative w-full">
+      <div ref={containerRef} className={cn(`relative  ${wrapperClassName}`)}>
         <div className="flex items-center gap-2">
           {showSearchIcon && (
             <IoIosSearch 
@@ -100,7 +101,7 @@ export const SelectInput = React.forwardRef<HTMLInputElement, SelectInputProps>(
         </div>
         
         {isOpen && filteredOptions.length > 0 && (
-          <div id={id}  className={cn(`absolute z-50 w-full mt-4 bg-white border rounded-md ${filteredOptions.length > 0 ? "shadow-lg" : "shadow-none"} overflow-auto ${optionsClassName}`)} >
+          <div id={id}  className={cn(`absolute z-50 w-full mt-4 h-[20vh] bg-white border rounded-md ${filteredOptions.length > 0 ? "shadow-lg" : "shadow-none"} overflow-auto ${optionsClassName}`)} >
             {filteredOptions.map((option) => (
               <div
                 key={option.value}
