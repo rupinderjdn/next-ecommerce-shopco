@@ -11,6 +11,7 @@ const ProductForm = () => {
         category: '',
         brand: '',
         srcUrl: '',
+        gallery: [],
         description: '',
         finalPrice: 0,
         discount: { amount: 0, percentage: 0 },
@@ -49,6 +50,30 @@ const ProductForm = () => {
             }
           }));
         }
+      };
+
+      const handleGalleryAdd = () => {
+        setProduct(prev => {
+          if (prev.gallery && prev.gallery.length >= 4) return prev;
+          return {
+            ...prev,
+            gallery: [...(prev.gallery || []), '']
+          };
+        });
+      };
+
+      const handleGalleryChange = (index: number, value: string) => {
+        setProduct(prev => ({
+          ...prev,
+          gallery: prev.gallery?.map((url, i) => i === index ? value : url)
+        }));
+      };
+
+      const handleGalleryRemove = (index: number) => {
+        setProduct(prev => ({
+          ...prev,
+          gallery: prev.gallery?.filter((_, i) => i !== index)
+        }));
       };
     
       const handleSubmit = (e: React.FormEvent) => {
@@ -154,7 +179,7 @@ const ProductForm = () => {
                 </div>
     
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Main Image URL</label>
                   <TextInput
                     value={product.srcUrl}
                     onChange={(e) => handleInputChange('srcUrl', e.target.value)}
@@ -162,6 +187,43 @@ const ProductForm = () => {
                     boundaryClass="flex items-center w-full border"
                     onClear={() => handleInputChange('srcUrl', '')}
                   />
+                </div>
+
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <label className="block text-sm font-medium text-gray-700">Gallery Images (Max 4)</label>
+                    <button
+                      type="button"
+                      onClick={handleGalleryAdd}
+                      disabled={product.gallery && product.gallery.length >= 4}
+                      className={`px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded-md ${
+                        product.gallery && product.gallery.length >= 4 
+                          ? 'opacity-50 cursor-not-allowed' 
+                          : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      + Add Image
+                    </button>
+                  </div>
+                  <div className="space-y-3">
+                    {product.gallery?.map((url, index) => (
+                      <div key={index} className="flex gap-2">
+                        <TextInput
+                          value={url}
+                          onChange={(e) => handleGalleryChange(index, e.target.value)}
+                          placeholder="https://example.com/gallery-image.jpg"
+                          boundaryClass="flex items-center w-full border"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => handleGalleryRemove(index)}
+                          className="px-2 py-1 text-sm text-red-600 border border-red-300 rounded-md hover:bg-red-50"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    ))}
+                  </div>
                 </div>
     
                 <div>
