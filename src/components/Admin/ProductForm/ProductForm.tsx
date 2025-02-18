@@ -15,7 +15,8 @@ const ProductForm = () => {
         description: '',
         finalPrice: 0,
         discount: { amount: 0, percentage: 0 },
-        rating: 0
+        rating: 0,
+        orientation: ''
     });
 
     const [mainImage, setMainImage] = useState<File | null>(null);
@@ -101,6 +102,13 @@ const ProductForm = () => {
         { value: 'clothing', label: 'Clothing', optionLabel: 'Clothing' },
         { value: 'books', label: 'Books', optionLabel: 'Books' }
     ];
+
+    const orientationOptions = [
+        { value: 'Men', label: 'Men', optionLabel: 'Men' },
+        { value: 'Women', label: 'Women', optionLabel: 'Women' },
+        { value: 'Boys', label: 'Boys', optionLabel: 'Boys' },
+        { value: 'Girls', label: 'Girls', optionLabel: 'Girls' }
+    ];
     
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
@@ -141,6 +149,18 @@ const ProductForm = () => {
                                     value={product.category}
                                     onChange={(value) => handleInputChange('category', value)}
                                     placeholder="Select category"
+                                    className="flex items-center w-full border"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Orientation</label>
+                                <SelectInput        
+                                    id="orientation-select"
+                                    options={orientationOptions}
+                                    value={product.orientation}
+                                    onChange={(value) => handleInputChange('orientation', value)}
+                                    placeholder="Select orientation"
                                     className="flex items-center w-full border"
                                 />
                             </div>
