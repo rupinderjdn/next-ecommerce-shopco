@@ -3,7 +3,7 @@ import allProductsDataJson from "@/database/allProducts.json";
 import { Product } from '@/types/product.types'
 import ProductList from '@/components/ui/ProductListView';
 import TextInput from '@/components/common/TextInput/TextInput';
-
+import { useRouter } from 'next/navigation';
 const ProductDisplay = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const allProductsData: Product[] = allProductsDataJson;
@@ -22,9 +22,10 @@ const ProductDisplay = () => {
     const handleClear = useCallback(() => {
         setSearchTerm('');
     }, []);
-
+    const router = useRouter();
     const handleAddProduct = () => {
         // TODO: Implement add product functionality
+        router.push('/admin/addProduct');
     };
 
     const handleUploadExcel = () => {
