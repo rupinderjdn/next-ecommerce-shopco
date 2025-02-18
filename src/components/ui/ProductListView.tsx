@@ -12,101 +12,86 @@ type ProductListProps = {
 
 const ProductList = ({ data }: ProductListProps) => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-row items-start aspect-auto justify-center w-full gap-2">
-        <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px]flex flex-row gap-2  lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
+    <div className="w-full bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className="flex items-start p-4 gap-6">
+        <div className="w-24 h-24 bg-gray-50 rounded-lg overflow-hidden flex-shrink-0">
           <Image
             src={data.srcUrl}
-            width={60}
-            height={60}
-            className="rounded-md object-contain hover:scale-110 transition-all duration-500"
+            width={96}
+            height={96}
+            className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
             alt={data.title}
             priority
           />
         </div>
-        <div className="flex flex-col gap-1 items-center">
-          <strong className="text-black xl:text-xl">{data.title}</strong>
-          <div className="text-gray-500 xl:text-sm">{data.description || "No description"}</div>
-        </div>
-        <div className="flex items-end mb-1 xl:mb-2">
-          <Rating
-            initialValue={data.rating}
-            allowFraction
-            SVGclassName="inline-block"
-            emptyClassName="fill-gray-50"
-            size={19}
-            readonly
-          />
-          <span className="text-black text-xs xl:text-sm ml-[11px] xl:ml-[13px] pb-0.5 xl:pb-0">
-            {data.rating.toFixed(1)}
-            <span className="text-black/60">/5</span>
-          </span>
-        </div>
-        <div className="flex items-center  space-x-[5px] xl:space-x-2.5">
-          {data.discount.percentage > 0 ? (
-            <span className="font-bold text-black text-xl xl:text-2xl">
-              {`${Math.round(
-                data.price - (data.price * data.discount.percentage) / 100
-              )}`}
+
+        <div className="flex-grow">
+          <h3 className="text-lg font-semibold text-gray-900 mb-1">{data.title}</h3>
+          <p className="text-sm text-gray-600 mb-2">{data.description || "No description available"}</p>
+          
+          <div className="flex items-center gap-2 mb-3">
+            <Rating
+              initialValue={data.rating}
+              allowFraction
+              SVGclassName="inline-block"
+              emptyClassName="fill-gray-100"
+              size={16}
+              readonly
+            />
+            <span className="text-sm text-gray-500">
+              {data.rating.toFixed(1)}
+              <span className="text-gray-400">/5</span>
             </span>
-          ) : data.discount.amount > 0 ? (
+          </div>
+
+          <div className="flex items-center gap-4">
             <div className="flex items-center">
-              <FaRupeeSign />
-              <span className="font-bold text-black text-xl xl:text-2xl">
-                {`${data.price - data.discount.amount}`}
-              </span>
+              {data.discount.percentage > 0 || data.discount.amount > 0 ? (
+                <>
+                  <FaRupeeSign className="text-gray-900 text-sm" />
+                  <span className="font-semibold text-gray-900">
+                    {data.discount.percentage > 0
+                      ? Math.round(data.price - (data.price * data.discount.percentage) / 100)
+                      : data.price - data.discount.amount}
+                  </span>
+                  <span className="ml-2 text-sm text-gray-400 line-through flex items-center">
+                    <FaRupeeSign className="text-xs" />
+                    {data.price}
+                  </span>
+                  <span className="ml-2 text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded">
+                    {data.discount.percentage > 0 
+                      ? `-${data.discount.percentage}%`
+                      : `-₹${data.discount.amount}`}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <FaRupeeSign className="text-gray-900 text-sm" />
+                  <span className="font-semibold text-gray-900">{data.price}</span>
+                </>
+              )}
             </div>
-          ) : (
-            <div className="flex items-center">
-              <FaRupeeSign />
-              {data.price}
-            </div>
-          )}
-          {data.discount.percentage > 0 && (
-            <div className="flex items-center">
-              <FaRupeeSign />
-              <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
-                {data.price}
-              </span>
-            </div>
-          )}
-          {data.discount.amount > 0 && (
-            <span className="font-bold text-black/40 line-through text-xl xl:text-2xl">
-              <FaRupeeSign />
-              {data.price}
-            </span>
-          )}
-          {data.discount.percentage > 0 ? (
-            <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-              {`-${data.discount.percentage}%`}
-            </span>
-          ) : (
-            data.discount.amount > 0 && (
-              <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-                {`-${data.discount.amount}`}
-              </span>
-            )
-          )}
+          </div>
         </div>
-        <div id="admin-product-list-view-button" className="flex items-center gap-2">
+
+        <div className="flex items-center gap-2">
           <Link 
             href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors"
           >
             View
           </Link>
           <Link 
             href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
-            className="bg-yellow-500 text-white px-4 py-2 rounded-md"
+            className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors"
           >
             Edit
           </Link>
-          <Link 
-            href={`/admin/product/${data.id}/${data.title.split(" ").join("-")}`}
-            className="bg-red-500 text-white px-4 py-2 rounded-md"
+          <button 
+            className="px-4 py-2 text-sm font-medium text-red-600 bg-red-50 rounded-md hover:bg-red-100 transition-colors"
           >
             Delete
-          </Link>
+          </button>
         </div>
       </div>
     </div>
