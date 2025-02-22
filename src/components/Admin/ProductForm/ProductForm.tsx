@@ -9,10 +9,7 @@ interface ProductFormProps {
 }
 
 const ProductForm = ({ id }: ProductFormProps) => {
-
-    
-
-
+    const [isLoading, setIsLoading] = useState(true);
 
     const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
         title: '',
@@ -45,6 +42,48 @@ const ProductForm = ({ id }: ProductFormProps) => {
             }));
         }
     }, [product.price, product.discount.percentage]);
+    
+    useEffect(() => {
+        const fetchProductDetails = async () => {
+            if (id) {
+                try {
+                    const response = await fetch(`/api/fetchProductDetails?id=${id}`);
+                    const productToEdit = await response.json();
+                    
+                    if (productToEdit) {
+                        setProduct({
+                            ...productToEdit,
+                            discount: productToEdit.discount || { amount: 0, percentage: 0 }
+                        });
+
+                        // Create File objects from existing URLs if they exist
+                        if (productToEdit.srcUrl) {
+                            const response = await fetch(productToEdit.srcUrl);
+                            const blob = await response.blob();
+                            setMainImage(new File([blob], 'main-image', { type: blob.type }));
+                        }
+
+                        if (productToEdit.gallery && productToEdit.gallery.length > 0) {
+                            const galleryFiles = await Promise.all(
+                                productToEdit.gallery.map(async (url: string) => {
+                                    const response = await fetch(url);
+                                    const blob = await response.blob();
+                                    return new File([blob], 'gallery-image', { type: blob.type });
+                                })
+                            );
+                            setGalleryImages(galleryFiles);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error fetching product details:', error);
+                    alert('Error loading product details');
+                }
+            }
+            setIsLoading(false);
+        };
+
+        fetchProductDetails();
+    }, [id]);
     
     const handleInputChange = (field: keyof Product, value: any) => {
         setProduct(prev => ({
@@ -105,27 +144,28 @@ const ProductForm = ({ id }: ProductFormProps) => {
         }
 
         const formData = new FormData();
-        formData.append('productData', JSON.stringify(product));
+        formData.append('productData', JSON.stringify({ ...product, id }));
         formData.append('mainImage', mainImage);
         galleryImages.forEach(image => {
             formData.append('galleryImages', image);
         });
 
         try {
-            const response = await fetch('/api/updateProduct', {
+            const endpoint = id ? '/api/updateProduct' : '/api/createProduct';
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 body: formData
             });
 
             const data = await response.json();
             if (data.success) {
-                alert('Product saved successfully!');
+                alert(`Product ${id ? 'updated' : 'created'} successfully!`);
             } else {
-                alert('Failed to save product');
+                alert(`Failed to ${id ? 'update' : 'create'} product`);
             }
         } catch (error) {
-            console.error('Error saving product:', error);
-            alert('Error saving product');
+            console.error(`Error ${id ? 'updating' : 'saving'} product:`, error);
+            alert(`Error ${id ? 'updating' : 'creating'} product`);
         }
     };
     
@@ -142,11 +182,17 @@ const ProductForm = ({ id }: ProductFormProps) => {
         { value: 'Girls', label: 'Girls', optionLabel: 'Girls' }
     ];
     
+    if (isLoading && id) {
+        return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
                 <div className="bg-white shadow-sm rounded-lg p-6">
-                    <h1 className="text-2xl font-bold text-gray-900 mb-6">Add New Product</h1>
+                    <h1 className="text-2xl font-bold text-gray-900 mb-6">
+                        {id ? 'Edit Product' : 'Add New Product'}
+                    </h1>
                     
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -338,7 +384,7 @@ const ProductForm = ({ id }: ProductFormProps) => {
                                 type="submit"
                                 className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                             >
-                                Create Product
+                                {id ? 'Update Product' : 'Create Product'}
                             </button>
                         </div>
                     </form>

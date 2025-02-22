@@ -7,7 +7,8 @@ export async function POST(request: Request) {
 
   try {
     const formData = await request.formData();
-    const productData = JSON.parse(formData.get('productData') as string) as Product;
+    let productData = JSON.parse(formData.get('productData') as string) as Product;
+    productData.id = Number(productData.id);
     const mainImage = formData.get('mainImage') as File;
     const galleryImages = formData.getAll('galleryImages') as File[];
 
@@ -37,12 +38,29 @@ export async function POST(request: Request) {
     const productsPath = path.join(process.cwd(), 'src/database/allProducts.json');
     const products: Product[] = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
-    // Update product if exists, otherwise add new
-    const productIndex = products.findIndex(p => p.id === productData.id);
-    if (productIndex !== -1) {
-      products[productIndex] = productData;
+    // Check if this is an update (ID exists and is valid)
+    if (productData.id && !isNaN(productData.id)) {
+      console.log("productData.id type:", typeof productData.id, "value:", productData.id);
+      console.log("first product id type:", typeof products[0].id, "value:", products[0].id);
+      const productIndex = products.findIndex(p => Number(p.id) === Number(productData.id));
+      if (productIndex === -1) {
+        return NextResponse.json(
+          { success: false, message: 'Product not found' },
+          { status: 404 }
+        );
+      }
+      
+      // Update existing product
+      const existingProduct = products[productIndex];
+      products[productIndex] = {
+        ...existingProduct,
+        ...productData,
+        srcUrl: mainImagePath,
+        gallery: galleryPaths,
+      };
     } else {
-      productData.id = Math.max(...products.map(p => p.id)) + 1;
+      // Add new product
+      productData.id = Math.max(...products.map(p => p.id), 0) + 1;
       products.push(productData);
     }
 

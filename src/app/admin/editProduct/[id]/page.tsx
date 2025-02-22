@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ProductForm from '@/components/Admin/ProductForm/ProductForm'
 import { useParams } from 'next/navigation';
