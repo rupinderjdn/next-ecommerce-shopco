@@ -50,8 +50,25 @@ export async function POST(request: Request) {
         );
       }
       
-      // Update existing product
+      // Delete old images
       const existingProduct = products[productIndex];
+      if (existingProduct.srcUrl) {
+        const oldMainImagePath = path.join(process.cwd(), 'public', existingProduct.srcUrl);
+        if (fs.existsSync(oldMainImagePath)) {
+          fs.unlinkSync(oldMainImagePath);
+        }
+      }
+      
+      if (existingProduct.gallery && Array.isArray(existingProduct.gallery)) {
+        existingProduct.gallery.forEach(galleryPath => {
+          const oldGalleryImagePath = path.join(process.cwd(), 'public', galleryPath);
+          if (fs.existsSync(oldGalleryImagePath)) {
+            fs.unlinkSync(oldGalleryImagePath);
+          }
+        });
+      }
+
+      // Update existing product
       products[productIndex] = {
         ...existingProduct,
         ...productData,
