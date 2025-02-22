@@ -87,14 +87,37 @@ const ProductForm = () => {
         }));
     };
     
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // TODO: Implement product submission with files
-        console.log({
-            product,
-            mainImage,
-            galleryImages
+        
+        if (!mainImage) {
+            alert('Please select a main image');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('productData', JSON.stringify(product));
+        formData.append('mainImage', mainImage);
+        galleryImages.forEach(image => {
+            formData.append('galleryImages', image);
         });
+
+        try {
+            const response = await fetch('/api/updateProduct', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert('Product saved successfully!');
+            } else {
+                alert('Failed to save product');
+            }
+        } catch (error) {
+            console.error('Error saving product:', error);
+            alert('Error saving product');
+        }
     };
     
     const categoryOptions = [
