@@ -59,12 +59,12 @@ const Header = ({ data }: { data: Product }) => {
                 {data.price}
               </span>
             )}
-            {data.discount.percentage > 0 && (
+            {/* {data.discount.percentage > 0 && (
               <span className="flex items-center font-bold text-black/40 line-through text-2xl sm:text-[32px]">
                 <FaRupeeSign />
                 {data.price}
               </span>
-            )}
+            )} */}
             {data.discount.amount > 0 && (
               <span className="flex items-center font-bold text-black/40 line-through text-2xl sm:text-[32px]">
                 <FaRupeeSign />

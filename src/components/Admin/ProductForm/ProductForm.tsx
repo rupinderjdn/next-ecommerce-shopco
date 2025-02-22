@@ -4,7 +4,16 @@ import { Product } from '@/types/product.types';
 import { Discount } from '@/types/product.types';
 import React, { useEffect, useState } from 'react'
 
-const ProductForm = () => {
+interface ProductFormProps {
+    id?: string;
+}
+
+const ProductForm = ({ id }: ProductFormProps) => {
+
+    
+
+
+
     const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
         title: '',
         price: 0,
