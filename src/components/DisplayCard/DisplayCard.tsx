@@ -17,16 +17,16 @@ const DisplayCard = ({ title, description, content, footer, routingUrl }: Displa
     return (
         <div className='flex flex-col gap-2'>
             <div onClick={() => router.push(`${routingUrl}` || '/')}>
-                <Card className='cursor-pointer hover:shadow-lg transition-all duration-300'>
+                <Card className='cursor-pointer hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 bg-card hover:bg-accent/5'>
                     <CardHeader>
-                <CardTitle>{title}</CardTitle>
-                <CardDescription>{description}</CardDescription>
-            </CardHeader>
-            {content && <CardContent>
-                <p>{content}</p>
-            </CardContent>}
-            {footer && <CardFooter>
-                <p>{footer}</p>
+                        <CardTitle className="text-primary">{title}</CardTitle>
+                        <CardDescription className="text-muted-foreground">{description}</CardDescription>
+                    </CardHeader>
+                    {content && <CardContent className="text-card-foreground">
+                        <p>{content}</p>
+                    </CardContent>}
+                    {footer && <CardFooter className="text-card-foreground/80">
+                        <p>{footer}</p>
                     </CardFooter>}
                 </Card>
             </div>
