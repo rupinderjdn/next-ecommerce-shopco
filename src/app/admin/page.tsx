@@ -20,6 +20,7 @@ const AdminPage = () => {
                 <DisplayCard title="Products" description="List of all products" routingUrl="/admin/products" />
                 <DisplayCard title="Users" description="List of all users" routingUrl="/admin/users" />
                 <DisplayCard title="Categories" description="List of all categories" routingUrl="/admin/categories" />
+                <DisplayCard title="Roles" description="Manage user roles" routingUrl="/admin/roles" />
             </div>
         </div>
     )
