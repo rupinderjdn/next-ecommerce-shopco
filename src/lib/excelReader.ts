@@ -73,6 +73,7 @@ export const readExcelAndTransform = (filePath: string): Promise<Product[]> => {
           srcUrl: variantUrls[0], // Variant 1
           gallery: variantUrls.slice(1).filter(Boolean), // Variants 2-4
           price: parseFloat(row["Price"]),
+          finalPrice: parseFloat(row["Price"]), // Add finalPrice equal to price since discount is 0
           discount: {
             amount: 0,
             percentage: 0

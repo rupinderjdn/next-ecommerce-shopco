@@ -3,6 +3,7 @@ import TextInput from '@/components/common/TextInput/TextInput';
 import { Product } from '@/types/product.types';
 import { Discount } from '@/types/product.types';
 import React, { useEffect, useState } from 'react'
+import { Category } from '@/types/product.types';
 
 interface ProductFormProps {
     id?: string;
@@ -10,11 +11,19 @@ interface ProductFormProps {
 
 const ProductForm = ({ id }: ProductFormProps) => {
     const [isLoading, setIsLoading] = useState(true);
+    const [categories, setCategories] = useState<Category[]>([]);
 
     const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
         title: '',
         price: 0,
-        category: '',
+        category: {
+            id: 0,
+            name: '',
+            slug: '',
+            isActive: false,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        },
         brand: '',
         srcUrl: '',
         gallery: [],
@@ -84,6 +93,25 @@ const ProductForm = ({ id }: ProductFormProps) => {
 
         fetchProductDetails();
     }, [id]);
+    
+    useEffect(() => {
+        const loadCategories = async () => {
+            try {
+                const response = await fetch('/api/categories');
+                const data = await response.json();
+                if (data.success) {
+                    console.log("data.categories", data.categories);
+                    setCategories(data.categories);
+                } else {
+                    console.error('Error loading categories:', data.message);
+                }
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        };
+        
+        loadCategories();
+    }, []);
     
     const handleInputChange = (field: keyof Product, value: any) => {
         setProduct(prev => ({
@@ -169,11 +197,12 @@ const ProductForm = ({ id }: ProductFormProps) => {
         }
     };
     
-    const categoryOptions = [
-        { value: 'electronics', label: 'Electronics', optionLabel: 'Electronics' },
-        { value: 'clothing', label: 'Clothing', optionLabel: 'Clothing' },
-        { value: 'books', label: 'Books', optionLabel: 'Books' }
-    ];
+    const categoryOptions = categories.map(category => ({
+        value: category.id.toString(),
+        label: category.name,
+        optionLabel: category.name,
+        isActive: category.isActive
+    })).filter(category => category.isActive);
 
     const orientationOptions = [
         { value: 'Men', label: 'Men', optionLabel: 'Men' },
@@ -224,8 +253,11 @@ const ProductForm = ({ id }: ProductFormProps) => {
                                 <SelectInput        
                                     id="category-select"
                                     options={categoryOptions}
-                                    value={product.category}
-                                    onChange={(value) => handleInputChange('category', value)}
+                                    value={product.category?.id?.toString() || ''}
+                                    onChange={(value) => {
+                                        const selectedCategory = categories.find(c => c.id.toString() === value);
+                                        handleInputChange('category', selectedCategory || null);
+                                    }}
                                     placeholder="Select category"
                                     className="flex items-center w-full border"
                                 />

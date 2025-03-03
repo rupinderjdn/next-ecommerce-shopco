@@ -1,0 +1,12 @@
+{
+  "categories": [
+    {
+      "name": "shirts",
+      "description": "shirt",
+      "isActive": true,
+      "id": 1,
+      "createdAt": "2025-03-03T15:46:11.527Z",
+      "updatedAt": "2025-03-03T15:46:11.527Z"
+    }
+  ]
+}
