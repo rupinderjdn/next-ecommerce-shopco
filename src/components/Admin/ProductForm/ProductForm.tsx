@@ -151,7 +151,7 @@ const ProductForm = ({ id }: ProductFormProps) => {
         });
 
         try {
-            const endpoint = id ? '/api/updateProduct' : '/api/createProduct';
+            const endpoint = id ? '/api/updateProduct' : '/api/updateProduct';
             const response = await fetch(endpoint, {
                 method: 'POST',
                 body: formData

@@ -17,7 +17,7 @@ const ProductList = ({ data }: ProductListProps) => {
     try {
       const response = await fetch(`/api/deleteProduct?id=${data.id}`, {
         method: 'DELETE',
-      });
+      });``
       
       if (!response.ok) {
         throw new Error('Failed to delete product');

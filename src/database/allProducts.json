@@ -96,25 +96,6 @@
     "rating": 4.5
   },
   {
-    "id": 6,
-    "title": "Flexibility",
-    "srcUrl": "https://drive.google.com/uc?export=view&id=1B-FLPQKaBND7SsEBMatoDx5ryMLeOS4A",
-    "gallery": [
-      "https://drive.google.com/uc?export=view&id=1NVuTC1qYIa3h_OvByvJkP1D68lEpqzOy",
-      "https://drive.google.com/uc?export=view&id=1R1_RISuhIN5-xWnAnrW-CNLuS_BqZAFg",
-      "https://drive.google.com/uc?export=view&id=1U2hXDZsjz9uAqQzxaQJ6RmjDhvvzsrZN"
-    ],
-    "price": 699,
-    "finalPrice": 699,
-    "discount": {
-      "amount": 0,
-      "percentage": 0
-    },
-    "category": "T-shirt",
-    "orientation": "Men",
-    "rating": 4.5
-  },
-  {
     "id": 7,
     "title": "Flipping",
     "srcUrl": "https://drive.google.com/uc?export=view&id=173TuK0-Y5rk-3nJ9Q6lnIdY7sibe78rN",
@@ -941,5 +922,24 @@
     "badge": "onSale",
     "orientation": "Men",
     "rating": 4.5
+  },
+  {
+    "title": "test",
+    "price": 400,
+    "category": "electronics",
+    "brand": "nike",
+    "srcUrl": "/uploads/1741013160323-Luffy.jpeg",
+    "gallery": [
+      "/uploads/1741013160323-Luffy.jpeg"
+    ],
+    "description": "test",
+    "finalPrice": 280,
+    "discount": {
+      "amount": 120,
+      "percentage": 30
+    },
+    "rating": 0,
+    "orientation": "Men",
+    "id": 50
   }
 ]
