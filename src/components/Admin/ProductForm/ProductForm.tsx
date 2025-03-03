@@ -287,6 +287,21 @@ const ProductForm = ({ id }: ProductFormProps) => {
                                     disabled
                                 />
                             </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+                                <TextInput
+                                    type="number"
+                                    value={product.rating}
+                                    onChange={(e) => handleInputChange('rating', Number(e.target.value))}
+                                    placeholder="0.0"
+                                    min="0"
+                                    max="5"
+                                    step="0.1"
+                                    boundaryClass="flex items-center w-full border"
+                                    onClear={() => handleInputChange('rating', 0)}
+                                />
+                            </div>
                         </div>
     
                         <div>

@@ -928,9 +928,9 @@
     "price": 400,
     "category": "electronics",
     "brand": "nike",
-    "srcUrl": "/uploads/1741013160323-Luffy.jpeg",
+    "srcUrl": "/uploads/1741013277325-main-image",
     "gallery": [
-      "/uploads/1741013160323-Luffy.jpeg"
+      "/uploads/1741013277325-gallery-image"
     ],
     "description": "test",
     "finalPrice": 280,
@@ -938,7 +938,7 @@
       "amount": 120,
       "percentage": 30
     },
-    "rating": 0,
+    "rating": 3,
     "orientation": "Men",
     "id": 50
   }
