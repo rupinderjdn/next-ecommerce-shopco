@@ -42,10 +42,10 @@ const CategoryForm = ({ category }: CategoryFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="space-y-8">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-800">
             Category Name
           </label>
           <input
@@ -53,13 +53,13 @@ const CategoryForm = ({ category }: CategoryFormProps) => {
             id="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-2 block w-full px-4 py-3 rounded-lg border-2 border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-white hover:border-gray-300 transition-colors duration-200"
             required
           />
         </div>
 
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="description" className="block text-sm font-semibold text-gray-800">
             Description
           </label>
           <textarea
@@ -67,34 +67,39 @@ const CategoryForm = ({ category }: CategoryFormProps) => {
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
             rows={4}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-2 block w-full px-4 py-3 rounded-lg border-2 border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-white hover:border-gray-300 transition-colors duration-200"
           />
         </div>
 
-        <div className="flex items-center">
-          <input
-            type="checkbox"
-            id="active"
-            checked={formData.isActive}
-            onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
-            className="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300 rounded"
-          />
-          <label htmlFor="active" className="ml-2 block text-sm font-medium text-gray-700">
-            Active
-          </label>
+        <div className="flex items-center p-4 bg-gray-50 rounded-lg border-2 border-gray-100">
+          <div className="relative flex items-start">
+            <div className="flex items-center h-5">
+              <input
+                type="checkbox"
+                id="active"
+                checked={formData.isActive}
+                onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
+                className="h-5 w-5 text-indigo-600 focus:ring-2 focus:ring-indigo-500 border-2 border-gray-300 rounded"
+              />
+            </div>
+            <div className="ml-3 text-sm">
+              <label htmlFor="active" className="font-medium text-gray-800">Active</label>
+              <p className="text-gray-600">Enable or disable this category</p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex justify-end space-x-3">
+        <div className="flex justify-end space-x-4 pt-6">
           <button
             type="button"
             onClick={() => router.push('/admin/categories')}
-            className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+            className="inline-flex items-center px-6 py-3 border-2 border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600"
+            className="inline-flex items-center px-6 py-3 border-2 border-transparent text-sm font-medium rounded-lg shadow-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
           >
             {category ? 'Update Category' : 'Create Category'}
           </button>
