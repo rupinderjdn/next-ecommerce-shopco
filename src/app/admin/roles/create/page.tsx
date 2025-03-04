@@ -56,6 +56,22 @@ export default function CreateRolePage() {
         </div>
         <div>
           <label className="block mb-3 text-sm font-semibold text-gray-800">Permissions</label>
+          <div className="flex gap-2 mb-4">
+            <button
+              type="button"
+              onClick={() => setRole({ ...role, permissions: AVAILABLE_PERMISSIONS.map(p => p.value) })}
+              className="px-3 py-1.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors duration-200"
+            >
+              Select All
+            </button>
+            <button
+              type="button"
+              onClick={() => setRole({ ...role, permissions: [] })}
+              className="px-3 py-1.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors duration-200"
+            >
+              Deselect All
+            </button>
+          </div>
           <div className="space-y-3">
             {AVAILABLE_PERMISSIONS.map((permission) => (
               <PermissionCheckbox
