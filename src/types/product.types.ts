@@ -33,10 +33,10 @@ export type Product = {
   finalPrice: number;
   discount: Discount;
   rating: number;
-  category: Category;
+  category: number; // id of the category
   subCategory?: string;
   brand?: string;
-  badge?: Badge[];
+  badge?: string[];
   orientation?: string;
   description?: string;
 };

@@ -14,7 +14,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -33,7 +33,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -52,7 +52,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -71,10 +71,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "newArrivals"
+    "badge": ["newArrivals"]
   },
   {
     "id": 5,
@@ -91,7 +91,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -110,7 +110,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -129,7 +129,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -148,7 +148,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -167,10 +167,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "newArrivals"
+    "badge": ["newArrivals"]
   },
   {
     "id": 11,
@@ -187,7 +187,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -206,7 +206,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -224,7 +224,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -243,10 +243,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "newArrivals"
+    "badge": ["newArrivals"]
   },
   {
     "id": 15,
@@ -263,9 +263,9 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
+    "badge": ["newArrivals"],
     "orientation": "Men",
-    "badge": "newArrivals",
     "rating": 4.5
   },
   {
@@ -283,10 +283,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "newArrivals"
+    "badge": ["newArrivals"]
   },
   {
     "id": 17,
@@ -303,7 +303,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -322,7 +322,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -340,7 +340,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -359,10 +359,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": "newArrivals"
+    "badge": ["newArrivals"]
   },
   {
     "id": 21,
@@ -379,7 +379,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -398,7 +398,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -417,7 +417,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -436,7 +436,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -455,7 +455,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -474,7 +474,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -493,7 +493,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -512,7 +512,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "T-shirt",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -531,7 +531,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -550,10 +550,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "topSelling"
+    "badge": ["topSelling"]
   },
   {
     "id": 31,
@@ -570,7 +570,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -589,7 +589,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -608,7 +608,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -627,7 +627,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -646,10 +646,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": "topSelling"
+    "badge": ["topSelling"]
   },
   {
     "id": 36,
@@ -666,7 +666,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -685,7 +685,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -704,7 +704,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Men",
     "rating": 4.5
   },
@@ -723,7 +723,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -742,7 +742,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -761,8 +761,8 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
-    "badge": "onSale",
+    "category": 1,
+    "badge": ["onSale"],
     "orientation": "Women",
     "rating": 4.5
   },
@@ -781,10 +781,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": "topSelling"
+    "badge": ["topSelling"]
   },
   {
     "id": 43,
@@ -801,7 +801,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -820,7 +820,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -839,7 +839,7 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5
   },
@@ -858,10 +858,10 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": "topSelling"
+    "badge": ["topSelling"]
   },
   {
     "id": 47,
@@ -878,9 +878,9 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
+    "category": 1,
+    "badge": ["onSale"],
     "orientation": "Women",
-    "badge": "onSale",
     "rating": 4.5
   },
   {
@@ -898,8 +898,8 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Hoodie",
-    "badge": "onSale",
+    "category": 1,
+    "badge": ["onSale"],
     "orientation": "Women",
     "rating": 4.5
   },
@@ -918,15 +918,15 @@
       "amount": 0,
       "percentage": 0
     },
-    "category": "Oversized tee",
-    "badge": "onSale",
+    "category": 1,
+    "badge": ["onSale"],
     "orientation": "Men",
     "rating": 4.5
   },
   {
     "title": "test",
     "price": 400,
-    "category": "electronics",
+    "category": 1,
     "brand": "nike",
     "srcUrl": "/uploads/1741013277325-main-image",
     "gallery": [

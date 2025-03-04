@@ -28,11 +28,11 @@ export const relatedProductData: Product[] = relatedProductDataJson;
 export const reviewsData: Review[] = reviewsDataJson;
 export const allProductsData: Product[] = transformedAllProducts;
 export const newArrivalsData: Product[] = allProductsData.filter(
-    (product) => product.badge === "newArrivals"
+    (product) => product.badge?.includes("newArrivals")
   );
 export const topSellingData: Product[] = allProductsData.filter(
-    (product) => product.badge === "topSelling"
+    (product) => product.badge?.includes("topSelling")
   );
 export const onSaleData: Product[] = allProductsData.filter(
-    (product) => product.badge === "onSale"
+    (product) => product.badge?.includes("onSale")
   );

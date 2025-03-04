@@ -9,6 +9,8 @@
       "amount": 0,
       "percentage": 20
     },
+    "finalPrice": 193.60,
+    "category": 1,
     "rating": 4.0
   },
   {
@@ -21,6 +23,8 @@
       "amount": 0,
       "percentage": 0
     },
+    "finalPrice": 145,
+    "category": 1,
     "rating": 3.5
   },
   {
@@ -33,6 +37,8 @@
       "amount": 0,
       "percentage": 0
     },
+    "finalPrice": 180,
+    "category": 1,
     "rating": 4.5
   },
   {
@@ -45,6 +51,8 @@
       "amount": 0,
       "percentage": 30
     },
+    "finalPrice": 105,
+    "category": 1,
     "rating": 5.0
   }
 ]
