@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PermissionCheckbox from '@/components/PermissionCheckbox';
+import { AVAILABLE_PERMISSIONS } from '@/config/permissions';
 
 export default function CreateRolePage() {
   const router = useRouter();
@@ -27,13 +28,6 @@ export default function CreateRolePage() {
       router.push('/admin/roles');
     }
   };
-
-  const permissions = [
-    { value: 'read', label: 'Read', description: 'View resources and data' },
-    { value: 'write', label: 'Write', description: 'Create and edit resources' },
-    { value: 'delete', label: 'Delete', description: 'Remove resources from the system' },
-    { value: 'admin', label: 'Admin', description: 'Full system access and management' },
-  ];
 
   return (
     <div className="p-8 max-w-3xl mx-auto">
@@ -63,7 +57,7 @@ export default function CreateRolePage() {
         <div>
           <label className="block mb-3 text-sm font-semibold text-gray-800">Permissions</label>
           <div className="space-y-3">
-            {permissions.map((permission) => (
+            {AVAILABLE_PERMISSIONS.map((permission) => (
               <PermissionCheckbox
                 key={permission.value}
                 permission={permission}

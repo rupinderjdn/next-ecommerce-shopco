@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import PermissionCheckbox from '@/components/PermissionCheckbox';
+import { AVAILABLE_PERMISSIONS, Permission } from '@/config/permissions';
 
 interface Role {
   id: string;
@@ -10,35 +11,6 @@ interface Role {
   description: string;
   permissions: string[];
 }
-
-interface Permission {
-  value: string;
-  label: string;
-  description: string;
-}
-
-const AVAILABLE_PERMISSIONS: Permission[] = [
-  {
-    value: 'read',
-    label: 'Read',
-    description: 'View resources and data'
-  },
-  {
-    value: 'write',
-    label: 'Write',
-    description: 'Create and edit resources'
-  },
-  {
-    value: 'delete',
-    label: 'Delete',
-    description: 'Remove resources from the system'
-  },
-  {
-    value: 'admin',
-    label: 'Admin',
-    description: 'Full system access and management'
-  }
-];
 
 export default function EditRolePage() {
   const router = useRouter();
@@ -104,21 +76,34 @@ export default function EditRolePage() {
         </div>
         <div>
           <label className="block mb-2 text-sm font-semibold text-gray-800">Permissions</label>
-          <div className="space-y-3">
-            {AVAILABLE_PERMISSIONS.map((permission) => (
-              <PermissionCheckbox
-                key={permission.value}
-                permission={permission}
-                checked={role.permissions.includes(permission.value)}
-                onChange={(checked) => {
-                  const newPermissions = checked
-                    ? [...role.permissions, permission.value]
-                    : role.permissions.filter(p => p !== permission.value);
-                  setRole({ ...role, permissions: newPermissions });
-                }}
-              />
-            ))}
-          </div>
+          {Object.entries(
+            AVAILABLE_PERMISSIONS.reduce((acc, permission) => {
+              if (!acc[permission.category!]) {
+                acc[permission.category!] = [];
+              }
+              acc[permission.category!].push(permission);
+              return acc;
+            }, {} as Record<string, Permission[]>)
+          ).map(([category, permissions]) => (
+            <div key={category} className="mb-6">
+              <h3 className="text-md font-medium text-gray-700 mb-3">{category}</h3>
+              <div className="space-y-3 ml-4">
+                {permissions.map((permission) => (
+                  <PermissionCheckbox
+                    key={permission.value}
+                    permission={permission}
+                    checked={role.permissions.includes(permission.value)}
+                    onChange={(checked) => {
+                      const newPermissions = checked
+                        ? [...role.permissions, permission.value]
+                        : role.permissions.filter(p => p !== permission.value);
+                      setRole({ ...role, permissions: newPermissions });
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
         <button
           type="submit"
