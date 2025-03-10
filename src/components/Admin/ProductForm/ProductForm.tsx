@@ -4,6 +4,7 @@ import { Product } from '@/types/product.types';
 import { Discount } from '@/types/product.types';
 import React, { useEffect, useState } from 'react'
 import { Category } from '@/types/product.types';
+import Image from 'next/image';
 
 interface ProductFormProps {
     id?: string;
@@ -27,8 +28,8 @@ const ProductForm = ({ id }: ProductFormProps) => {
         orientation: ''
     });
 
-    const [mainImage, setMainImage] = useState<File | null>(null);
-    const [galleryImages, setGalleryImages] = useState<File[]>([]);
+    const [mainImage, setMainImage] = useState<File | string | null>(null);
+    const [galleryImages, setGalleryImages] = useState<(File | string)[]>([]);
     
     useEffect(() => {
         if (product.price && product.discount.percentage) {
@@ -59,7 +60,9 @@ const ProductForm = ({ id }: ProductFormProps) => {
                         });
 
                         // Create File objects from existing URLs if they exist
-                        if (productToEdit.srcUrl) {
+                        if(productToEdit.srcUrl.includes('drive.google.com')) {
+                            setMainImage(productToEdit.srcUrl);
+                        } else if(productToEdit.srcUrl) {
                             const response = await fetch(productToEdit.srcUrl);
                             const blob = await response.blob();
                             setMainImage(new File([blob], 'main-image', { type: blob.type }));
@@ -68,12 +71,17 @@ const ProductForm = ({ id }: ProductFormProps) => {
                         if (productToEdit.gallery && productToEdit.gallery.length > 0) {
                             const galleryFiles = await Promise.all(
                                 productToEdit.gallery.map(async (url: string) => {
-                                    const response = await fetch(url);
-                                    const blob = await response.blob();
-                                    return new File([blob], 'gallery-image', { type: blob.type });
+                                    if (url.includes('drive.google.com')) {
+                                        return url;
+                                    } else {
+                                        const response = await fetch(url);
+                                        const blob = await response.blob();
+                                        return new File([blob], 'gallery-image', { type: blob.type });
+                                    }
                                 })
                             );
                             setGalleryImages(galleryFiles);
+                            
                         }
                     }
                 } catch (error) {
@@ -139,7 +147,7 @@ const ProductForm = ({ id }: ProductFormProps) => {
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         
         if (galleryImages.length + imageFiles.length <= 4) {
-            setGalleryImages(prev => [...prev, ...imageFiles]);
+            setGalleryImages(prev => [...prev, ...imageFiles] as (File | string)[]);
             const imageUrls = imageFiles.map(file => URL.createObjectURL(file));
             setProduct(prev => ({
                 ...prev,
@@ -347,10 +355,12 @@ const ProductForm = ({ id }: ProductFormProps) => {
                                 </div>
                             </div>
                             {mainImage && (
-                                <img 
-                                    src={URL.createObjectURL(mainImage)} 
+                                <Image
+                                    src={typeof mainImage === 'string' ? mainImage : URL.createObjectURL(mainImage as File)} 
                                     alt="Preview" 
-                                    className="mt-2 h-32 object-cover rounded-md"
+                                    className="mt-2 w-full h-full object-cover rounded-md"
+                                    width={200}
+                                    height={200}
                                 />
                             )}
                         </div>
@@ -385,10 +395,12 @@ const ProductForm = ({ id }: ProductFormProps) => {
                             <div className="grid grid-cols-2 gap-4 mt-2">
                                 {galleryImages.map((file, index) => (
                                     <div key={index} className="relative">
-                                        <img 
-                                            src={URL.createObjectURL(file)} 
+                                        <Image
+                                            src={typeof file === 'string' ? file : URL.createObjectURL(file as File)} 
                                             alt={`Gallery ${index + 1}`} 
-                                            className="h-32 w-full object-cover rounded-md"
+                                            className="w-full h-full object-cover rounded-md"
+                                            width={200}
+                                            height={200}
                                         />
                                         <button
                                             type="button"
