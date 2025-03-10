@@ -16,7 +16,7 @@
     },
     "category": 1,
     "orientation": "Men",
-    "rating": 4.5
+    "rating": 3.7
   },
   {
     "id": 2,
@@ -74,7 +74,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["newArrivals"]
+    "badge": [
+      "newArrivals"
+    ]
   },
   {
     "id": 5,
@@ -170,7 +172,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["newArrivals"]
+    "badge": [
+      "newArrivals"
+    ]
   },
   {
     "id": 11,
@@ -246,7 +250,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["newArrivals"]
+    "badge": [
+      "newArrivals"
+    ]
   },
   {
     "id": 15,
@@ -264,7 +270,9 @@
       "percentage": 0
     },
     "category": 1,
-    "badge": ["newArrivals"],
+    "badge": [
+      "newArrivals"
+    ],
     "orientation": "Men",
     "rating": 4.5
   },
@@ -286,7 +294,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["newArrivals"]
+    "badge": [
+      "newArrivals"
+    ]
   },
   {
     "id": 17,
@@ -362,7 +372,9 @@
     "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": ["newArrivals"]
+    "badge": [
+      "newArrivals"
+    ]
   },
   {
     "id": 21,
@@ -553,7 +565,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["topSelling"]
+    "badge": [
+      "topSelling"
+    ]
   },
   {
     "id": 31,
@@ -649,7 +663,9 @@
     "category": 1,
     "orientation": "Men",
     "rating": 4.5,
-    "badge": ["topSelling"]
+    "badge": [
+      "topSelling"
+    ]
   },
   {
     "id": 36,
@@ -762,7 +778,9 @@
       "percentage": 0
     },
     "category": 1,
-    "badge": ["onSale"],
+    "badge": [
+      "onSale"
+    ],
     "orientation": "Women",
     "rating": 4.5
   },
@@ -784,7 +802,9 @@
     "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": ["topSelling"]
+    "badge": [
+      "topSelling"
+    ]
   },
   {
     "id": 43,
@@ -861,7 +881,9 @@
     "category": 1,
     "orientation": "Women",
     "rating": 4.5,
-    "badge": ["topSelling"]
+    "badge": [
+      "topSelling"
+    ]
   },
   {
     "id": 47,
@@ -879,7 +901,9 @@
       "percentage": 0
     },
     "category": 1,
-    "badge": ["onSale"],
+    "badge": [
+      "onSale"
+    ],
     "orientation": "Women",
     "rating": 4.5
   },
@@ -899,7 +923,9 @@
       "percentage": 0
     },
     "category": 1,
-    "badge": ["onSale"],
+    "badge": [
+      "onSale"
+    ],
     "orientation": "Women",
     "rating": 4.5
   },
@@ -919,7 +945,9 @@
       "percentage": 0
     },
     "category": 1,
-    "badge": ["onSale"],
+    "badge": [
+      "onSale"
+    ],
     "orientation": "Men",
     "rating": 4.5
   },

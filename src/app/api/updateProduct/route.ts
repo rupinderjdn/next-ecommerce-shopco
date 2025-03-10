@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const formData = await request.formData();
     let productData = JSON.parse(formData.get('productData') as string) as Product;
     productData.id = Number(productData.id);
-    const mainImage = formData.get('mainImage') as File;
+    const mainImage = formData.get('mainImage');
     const galleryImages = formData.getAll('galleryImages') as File[];
 
     // Create uploads directory if it doesn't exist
@@ -18,19 +18,34 @@ export async function POST(request: Request) {
       fs.mkdirSync(uploadsDir, { recursive: true });
     }
 
-    // Save main image
-    const mainImageBuffer = Buffer.from(await mainImage.arrayBuffer());
-    const mainImagePath = `/uploads/${Date.now()}-${mainImage.name}`;
-    fs.writeFileSync(path.join(process.cwd(), 'public', mainImagePath), mainImageBuffer);
-    productData.srcUrl = mainImagePath;
+    // Handle main image
+    if (mainImage instanceof File) {
+      // Handle regular file upload
+      const mainImageBuffer = Buffer.from(await mainImage.arrayBuffer());
+      const mainImagePath = `/uploads/${Date.now()}-${mainImage.name}`;
+      fs.writeFileSync(path.join(process.cwd(), 'public', mainImagePath), mainImageBuffer);
+      productData.srcUrl = mainImagePath;
+    } else {
+      // If it's a Google Drive URL, use it directly
+      const mainImageUrl = formData.get('mainImage') as string;
+      if (mainImageUrl.includes('drive.google.com')) {
+        productData.srcUrl = mainImageUrl;
+      }
+    }
 
-    // Save gallery images
+    // Handle gallery images
     const galleryPaths: string[] = [];
     for (const image of galleryImages) {
-      const buffer = Buffer.from(await image.arrayBuffer());
-      const imagePath = `/uploads/${Date.now()}-${image.name}`;
-      fs.writeFileSync(path.join(process.cwd(), 'public', imagePath), buffer);
-      galleryPaths.push(imagePath);
+      if (image instanceof File) {
+        // Handle regular file upload
+        const buffer = Buffer.from(await image.arrayBuffer());
+        const imagePath = `/uploads/${Date.now()}-${image.name}`;
+        fs.writeFileSync(path.join(process.cwd(), 'public', imagePath), buffer);
+        galleryPaths.push(imagePath);
+      } else if (typeof image === 'string' && (image as string).includes('drive.google.com')) {
+        // If it's a Google Drive URL, use it directly
+        galleryPaths.push(image as string);
+      }
     }
     productData.gallery = galleryPaths;
 
@@ -72,8 +87,8 @@ export async function POST(request: Request) {
       products[productIndex] = {
         ...existingProduct,
         ...productData,
-        srcUrl: mainImagePath,
-        gallery: galleryPaths,
+        srcUrl: productData.srcUrl,
+        gallery: productData.gallery,
       };
     } else {
       // Add new product
