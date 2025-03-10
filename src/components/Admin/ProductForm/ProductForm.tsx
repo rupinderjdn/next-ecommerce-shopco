@@ -16,14 +16,7 @@ const ProductForm = ({ id }: ProductFormProps) => {
     const [product, setProduct] = useState<Partial<Omit<Product, 'discount'>> & { discount: Discount }>({
         title: '',
         price: 0,
-        category: {
-            id: 0,
-            name: '',
-            slug: '',
-            isActive: false,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString()
-        },
+        category: 0,
         brand: '',
         srcUrl: '',
         gallery: [],
@@ -253,7 +246,7 @@ const ProductForm = ({ id }: ProductFormProps) => {
                                 <SelectInput        
                                     id="category-select"
                                     options={categoryOptions}
-                                    value={product.category?.id?.toString() || ''}
+                                    value={product.category}
                                     onChange={(value) => {
                                         const selectedCategory = categories.find(c => c.id.toString() === value);
                                         handleInputChange('category', selectedCategory || null);
