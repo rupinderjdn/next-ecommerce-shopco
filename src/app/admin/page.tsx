@@ -9,10 +9,6 @@ const AdminPage = () => {
     // TODO need to check if the user is logged in
     // TODO need to check if the user has the correct permissions
 
-
-    // TODO product card
-    // TODO users  card
-    // TODO categories card
   return (
         <div className='flex flex-col gap-4 justify-center items-center min-h-[50vh] p-8 bg-background'>
             <h1 className='text-3xl font-bold text-primary mb-6 tracking-tight'>Welcome to the Admin Dashboard</h1>
