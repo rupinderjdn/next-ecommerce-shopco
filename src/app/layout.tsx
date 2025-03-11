@@ -24,14 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={satoshi.className}>
-        <HolyLoader color="#868686" />
+        {/* <HolyLoader color="#868686" />
         <TopBanner />
         <Providers>
-          {/* // TODO might have to remove this navabr from here and add it to the layouts where it is needed */}
-          <TopNavbar />
+          <TopNavbar /> */}
           {children}
-        </Providers>
-        <Footer />
+        {/* </Providers>
+        <Footer /> */}
       </body>
     </html>
   );

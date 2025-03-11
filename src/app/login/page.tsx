@@ -1,5 +1,11 @@
 import Image from 'next/image'
 import LoginForm from '@/components/Login/LoginForm'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Login - Trithya",
+  description: "Login to your account",
+};
 
 export default function LoginPage() {
   return (

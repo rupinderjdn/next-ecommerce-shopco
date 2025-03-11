@@ -1,15 +1,26 @@
 'use client'
 import { useState } from 'react'
-
+import { login, LoginResponse } from './LoginFormUtils'
+import { useRouter } from 'next/navigation'
+import { ApiResponse } from '@/utils/ApiUtils'
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const router = useRouter()
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Handle login logic here
+    console.log(formData)
+    const response : ApiResponse<LoginResponse> = await login(formData.email, formData.password)
+    const {data, error, status} = response;
+    if(status === 200) {
+      router.push('/admin')
+    } else {
+      console.log(error)
+    }
   }
 
   return (

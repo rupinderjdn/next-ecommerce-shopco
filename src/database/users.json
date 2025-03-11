@@ -3,13 +3,15 @@
     "id": "1",
     "name": "John Doe",
     "email": "john@example.com",
+    "password": "password",
     "role": "user",
-    "isActive": false
+    "isActive": true
   },
   {
     "id": "2",
     "name": "Jane Smith - edited",
     "email": "jane@example.com",
+    "password": "password",
     "role": "admin",
     "isActive": true
   }
