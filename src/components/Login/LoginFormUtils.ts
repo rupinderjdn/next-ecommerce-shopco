@@ -1,4 +1,4 @@
-import { apiFetch } from '@/utils/ApiUtils';
+import ApiClient from '@/utils/apiClient';
 
 export interface LoginResponse {
     message: string;
@@ -9,7 +9,7 @@ export interface LoginResponse {
 }
 
 export const login = async (email: string, password: string) => {
-    return apiFetch<LoginResponse>('/api/users/auth', {
+    return ApiClient.fetch<LoginResponse>('/api/auth/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
     });

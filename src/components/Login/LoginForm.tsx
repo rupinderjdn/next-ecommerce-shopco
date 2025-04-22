@@ -3,11 +3,15 @@ import { useState } from 'react'
 import { login, LoginResponse } from './LoginFormUtils'
 import { useRouter } from 'next/navigation'
 import { ApiResponse } from '@/utils/ApiUtils'
+import { EyeClosedIcon } from '@radix-ui/react-icons'
+import { EyeIcon } from 'lucide-react'
+
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
+  const [showPassword, setShowPassword] = useState(false)
 
   const router = useRouter()
   const handleSubmit = async (e: React.FormEvent) => {
@@ -48,15 +52,28 @@ const LoginForm = () => {
           <label htmlFor="password" className="block text-sm font-medium text-gray-700">
             Password
           </label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-          />
+          <div className="relative">
+            <input
+              id="password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
+              value={formData.password}
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            />
+            <button
+              type="button"
+              className="absolute inset-y-0 right-0 pr-3 flex items-center mt-1"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? (
+                <EyeClosedIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              ) : (
+                <EyeIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              )}
+            </button>
+          </div>
         </div>
 
         <div className="flex items-center justify-between">

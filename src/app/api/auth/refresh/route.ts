@@ -28,7 +28,7 @@ export async function POST() {
     // Set new refresh token in HTTP-only cookie
     cookieStore.set('refreshToken', newRefreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: true,
       sameSite: 'strict',
       maxAge: 7 * 24 * 60 * 60 // 7 days
     });
