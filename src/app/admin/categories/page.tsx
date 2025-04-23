@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Category } from '@/types/product.types';
+import ApiClient from '@/utils/apiClient';
 
 const CategoriesPage = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -13,9 +14,13 @@ const CategoriesPage = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('/api/categories');
-      const data = await response.json();
-      setCategories(data.categories);
+      const response = await ApiClient.fetch<any>('/api/categories');
+      const {data, error, status} = response;
+      if(status === 200) {
+        setCategories(data?.categories || []);
+      } else {
+        console.error('Error fetching categories:', error);
+      }
     } catch (error) {
       console.error('Error fetching categories:', error);
     }

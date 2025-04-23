@@ -14,7 +14,7 @@ export async function POST() {
       );
     }
 
-    const payload = verifyRefreshToken(refreshToken.value);
+    const payload = await verifyRefreshToken(refreshToken.value);
 
     if (!payload) {
       return NextResponse.json(
@@ -23,7 +23,7 @@ export async function POST() {
       );
     }
 
-    const { accessToken, refreshToken: newRefreshToken } = generateTokens(payload);
+    const { accessToken, refreshToken: newRefreshToken } = await generateTokens(payload);
 
     // Set new refresh token in HTTP-only cookie
     cookieStore.set('refreshToken', newRefreshToken, {

@@ -22,6 +22,7 @@ class ApiClient {
     options: RequestInit = {}
   ): Promise<ApiResponse<T>> {
     try {
+      console.log(this.accessToken)
       const headers = {
         'Content-Type': 'application/json',
         ...(this.accessToken && { Authorization: `Bearer ${this.accessToken}` }),

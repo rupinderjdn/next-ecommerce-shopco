@@ -22,14 +22,14 @@ export async function middleware(request: NextRequest) {
   if (pathname.startsWith('/api/')) {
     const accessToken = request.headers.get('Authorization')?.split(' ')[1];
     const refreshToken = request.cookies.get('refreshToken')?.value;
-
+    console.log("Access token", accessToken, "Refresh token", refreshToken)
     // If no access token, try to use refresh token
     if (!accessToken && refreshToken) {
-      const payload = verifyRefreshToken(refreshToken);
-      
+      const payload = await verifyRefreshToken(refreshToken);
+      console.log("Payload", payload)
       if (payload) {
         // Generate new tokens
-        const { accessToken: newAccessToken, refreshToken: newRefreshToken } = generateTokens(payload);
+        const { accessToken: newAccessToken, refreshToken: newRefreshToken } = await generateTokens(payload);
         
         // Create response with new access token
         const response = NextResponse.next();
@@ -51,7 +51,9 @@ export async function middleware(request: NextRequest) {
 
     // Verify access token
     if (accessToken) {
-      const payload = verifyAccessToken(accessToken);
+      console.log("Verifying access token", accessToken)
+      const payload = await verifyAccessToken(accessToken);
+      console.log("Payload received", payload)
       if (payload) {
         return NextResponse.next();
       }
@@ -59,7 +61,7 @@ export async function middleware(request: NextRequest) {
 
     // If both tokens are invalid or missing, return unauthorized
     return new NextResponse(
-      JSON.stringify({ error: 'Unauthorized' }),
+      JSON.stringify({ error: 'Unauthorized please login again' }),
       { 
         status: 401,
         headers: {

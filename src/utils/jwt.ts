@@ -1,28 +1,40 @@
-import jwt from 'jsonwebtoken';
+import { SignJWT, jwtVerify, JWTPayload } from 'jose';
 import { TokenPayload } from '@/types/auth';
 
-const JWT_SECRET = process.env.NEXT_PUBLIC_JWT_SECRET || '';
-const JWT_REFRESH_SECRET = process.env.NEXT_PUBLIC_JWT_REFRESH_SECRET || '';
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || '');
+const JWT_REFRESH_SECRET = new TextEncoder().encode(process.env.JWT_REFRESH_SECRET || '');
 
-export const generateTokens = (payload: TokenPayload) => {
-  const accessToken = jwt.sign(payload, JWT_SECRET, { expiresIn: '15m' });
-  const refreshToken = jwt.sign(payload, JWT_REFRESH_SECRET, { expiresIn: '7d' });
+export const generateTokens = async (payload: TokenPayload) => {
+  const accessToken = await new SignJWT({ ...payload })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setExpirationTime('15m')
+    .sign(JWT_SECRET);
+
+  const refreshToken = await new SignJWT({ ...payload })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setExpirationTime('7d')
+    .sign(JWT_REFRESH_SECRET);
   
   return { accessToken, refreshToken };
 };
 
-export const verifyAccessToken = (token: string) => {
+export const verifyAccessToken = async (token: string) => {
   try {
-    return jwt.verify(token, JWT_SECRET) as TokenPayload;
+    const { payload } = await jwtVerify(token, JWT_SECRET);
+    return payload as unknown as TokenPayload;
   } catch (error) {
+    console.error('Access token verification failed:', error);
     return null;
   }
 };
 
-export const verifyRefreshToken = (token: string) => {
+export const verifyRefreshToken = async (token: string) => {
   try {
-    return jwt.verify(token, JWT_REFRESH_SECRET) as TokenPayload;
+    console.log(token)
+    const { payload } = await jwtVerify(token, JWT_REFRESH_SECRET);
+    return payload as unknown as TokenPayload;
   } catch (error) {
+    console.error('Refresh token verification failed:', error);
     return null;
   }
 }; 

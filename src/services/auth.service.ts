@@ -35,13 +35,14 @@ export class AuthService {
         role: user.role
       };
 
-      const { accessToken, refreshToken } = generateTokens(tokenPayload);
+      const { accessToken, refreshToken } = await generateTokens(tokenPayload);
 
       // In a real application, you would store the refresh token in a database
       // and associate it with the user
 
       return {
         accessToken,
+        refreshToken,
         user: {
           id: user.id,
           email: user.email,

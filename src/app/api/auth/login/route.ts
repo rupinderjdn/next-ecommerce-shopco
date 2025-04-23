@@ -26,9 +26,9 @@ export async function POST(request: Request) {
 
     // Set refresh token in HTTP-only cookie
     const cookieStore = await cookies();
-    cookieStore.set('refreshToken', authResponse.accessToken, {
+    cookieStore.set('refreshToken', authResponse.refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: true,
       sameSite: 'strict',
       maxAge: 7 * 24 * 60 * 60 // 7 days
     });

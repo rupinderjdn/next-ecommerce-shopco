@@ -6,6 +6,7 @@ export interface LoginResponse {
         email: string;
         // ... other user fields
     };
+    accessToken: string;
 }
 
 export const login = async (email: string, password: string) => {

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { ApiResponse } from '@/utils/ApiUtils'
 import { EyeClosedIcon } from '@radix-ui/react-icons'
 import { EyeIcon } from 'lucide-react'
+import ApiClient from '@/utils/apiClient'
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,13 @@ const LoginForm = () => {
     // Handle login logic here
     console.log(formData)
     const response : ApiResponse<LoginResponse> = await login(formData.email, formData.password)
+    console.log(response)
     const {data, error, status} = response;
+    const {accessToken } = data || {};
+    console.log(accessToken)
+    if(accessToken) {
+      ApiClient.setAccessToken(accessToken);
+    }
     if(status === 200) {
       router.push('/admin')
     } else {
